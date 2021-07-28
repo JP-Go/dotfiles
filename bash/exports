@@ -1,0 +1,9 @@
+EDITOR=nvim
+VISUAL=nvim
+TEXMFDIST=/usr/share/texmf-dist
+TEXMFLOCAL=/usr/local/share/texmf:/usr/share/texmf
+TEXMFSYSVAR=/var/lib/texmf
+TEXMFSYSCONFIG=/etc/texmf
+TEXMFHOME=~/texmf
+TEXMFVAR=~/.texlive/texmf-var
+TEXMFCONFIG=~/.texlive/texmf-config
