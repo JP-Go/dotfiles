@@ -1,10 +1,13 @@
+alias ls="ls --color"
 alias la="ls -a"
 alias ll="ls -lh"
+alias l="ls -lh"
 alias vim="nvim"
 
 alias ga="git add"
 alias gc="git commit"
 alias gd="git diff"
+alias gs="git status"
 alias gp="git push"
 
-alias tlmgr='$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode'
+alias tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"

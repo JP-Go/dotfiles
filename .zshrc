@@ -3,6 +3,7 @@ HISTFILE=~/.config/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
+bindkey '\e[3~' delete-char
 setopt autocd extendedglob
 unsetopt beep
 # End of lines configured by zsh-newuser-install
