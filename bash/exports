@@ -7,3 +7,4 @@ TEXMFSYSCONFIG=/etc/texmf
 TEXMFHOME=~/texmf
 TEXMFVAR=~/.texlive/texmf-var
 TEXMFCONFIG=~/.texlive/texmf-config
+PATH=$PATH:/home/jp/.cargo/bin
