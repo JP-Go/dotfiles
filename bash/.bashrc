@@ -149,11 +149,11 @@ PERL_MM_OPT="INSTALL_BASE=/home/jp/perl5"; export PERL_MM_OPT;
 parse_git_branch() {
     local branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
     if [[ $branch ]]; then
-        echo "$(tput setaf 7) git$(tput setaf 2)${branch/ /}$(tput sgr0)"
+        echo " git${branch/ /}"
     fi
 }
 
 __blue=$(tput setaf 4)
 __green=$(tput setaf 2)
 __reset=$(tput sgr0)
-PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[$(parse_git_branch)\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch) $
+PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch)\[$(tput setaf 7)\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch) $
