@@ -139,22 +139,3 @@ ex ()
 source ~/.config/bash/alias
 source ~/.config/bash/exports
 
-PATH="/home/jp/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/jp/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/jp/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/jp/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/jp/perl5"; export PERL_MM_OPT;
-. "$HOME/.cargo/env"
-
-parse_git_branch() {
-    local branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
-    if [[ $branch ]]; then
-        echo " git:${branch/ /}"
-    fi
-}
-
-__blue=$(tput setaf 4)
-__green=$(tput setaf 2)
-__reset=$(tput sgr0)
-PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch)\[$(tput setaf 7)\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch) $
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
