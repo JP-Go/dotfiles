@@ -12,3 +12,5 @@ alias gits="git status"
 alias gitp="git push"
 
 alias tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"
+
+alias goto=". ~/.dotfiles/scripts/goto.sh"
