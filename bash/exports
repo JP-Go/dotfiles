@@ -38,11 +38,13 @@ PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch)\[$(tpu
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 # Add jdt-ls and junit paths
-export JDTLS_HOME=/home/jp/Java
+export JDTLS_HOME=$HOME/.local/lib/java-lsp
+export JAVA_HOME=/usr/lib64/jvm/java-16-openjdk
 export JUNIT_HOME=/usr/share/java
 
 #Update java packages db for jdt-ls
 for package in $(find /usr/share/java -name '*.jar') ; do
-    CP=$CP:$package
+    CLASSPATH=$CLASSPATH:$package
 done
 
+CLASSPATH=$CLASSPATH:. ; export CLASSPATH
