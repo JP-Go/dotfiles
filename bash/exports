@@ -46,5 +46,4 @@ export JUNIT_HOME=/usr/share/java
 for package in $(find /usr/share/java -name '*.jar') ; do
     CLASSPATH=$CLASSPATH:$package
 done
-
 CLASSPATH=$CLASSPATH:. ; export CLASSPATH
