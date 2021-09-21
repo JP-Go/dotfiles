@@ -1,5 +1,5 @@
 #!/bin/bash
-code_folders=`echo ~/code/*/ | tr ' ' '\n'`
+code_folders=`echo ~/code/*/**/ | tr ' ' '\n'`
 dotfiles=`echo ~/.dotfiles ~/.dotfiles/*/| tr ' ' '\n'`
 configs=`echo ~/.config/nvim`
 work_folders=`echo ~/Fis-21-2/*/**/ ~/Fis-21-2/*/ ~/Documentos/*/**/ ~/Documentos/ |tr ' ' '\n'`
