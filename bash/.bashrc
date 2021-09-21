@@ -139,3 +139,4 @@ ex ()
 source ~/.config/bash/alias
 source ~/.config/bash/exports
 
+eval "$(starship init bash)"
