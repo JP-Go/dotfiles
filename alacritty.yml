@@ -735,7 +735,7 @@ key_bindings:
   - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
   - { key: T,          mods: Control|Shift,              action: SpawnNewInstance}
-  - { key: N,          mods: Control,      chars: ". ~/.dotfiles/scripts/goto.sh \x0D"}
+  - { key: N,          mods: Control,      chars: "goto \x0D"}
   # - { key: L,         mods: Control,                    action: ClearLogNotice }
   #- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
   # - { key: Paste,                                       action: Paste          }
