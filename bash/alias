@@ -1,6 +1,7 @@
 if [[ -f /usr/bin/exa ]]; then
-    alias la="exa -a"
-    alias ll="exa -lGha --git -s type"
+    alias ls="exa -G" 
+    alias la="exa -aG"
+    alias ll="exa -lha --git -s type"
     alias l="exa -lhx"
 fi
 alias vim="nvim"
