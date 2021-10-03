@@ -5,6 +5,7 @@ if [[ -f /usr/bin/lsd ]]; then
     alias l="lsd -lh"
 fi
 alias vim="nvim"
+alias v="nvim"
 
 alias gita="git add"
 alias gitc="git commit"
