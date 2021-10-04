@@ -33,14 +33,20 @@ parse_git_branch() {
 show_uncommited_git_changes() {
     local changes=$(git diff)
     if  [[ $changes ]]; then
-        echo "#"
+        echo ""
     fi
 }
 
 
-show_unpushed_git_chanegs() {
+show_unpushed_git_changes() {
+    local remote=$(git remote)
     local branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-    local log
+    local remote_branch=$(printf "${remote}/${branch}")
+    
+    local unpushed=$(git log $remote_branch..HEAD | wc -l)
+    if [[ unpushed -ne 0 ]]; then 
+        echo ""
+    fi
 }
 
 # Show unpushed changes in git repo
@@ -50,7 +56,7 @@ __green=$(tput setaf 2)
 __red=$(tput setaf 1)
 __purple=$(tput setaf 7)
 __reset=$(tput sgr0)
-PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch) \[${__red}\][$(show_uncommited_git_changes)]\[${__purple}\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch) $
+PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch) \[${__red}\][$(show_uncommited_git_changes)$(show_unpushed_git_changes)]\[${__purple}\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch)[] $
 
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
