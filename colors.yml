@@ -144,4 +144,4 @@ schemes:
       cyan:    '#54ced6'
       white:   '#282a2e'
 
-colors: *tomorrow_night
+colors: *tomorrow_night_b
