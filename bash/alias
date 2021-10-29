@@ -1,3 +1,5 @@
+#vim: set ft=bash
+
 if [[ -f /usr/bin/lsd ]]; then
     alias ls="lsd " 
     alias la="lsd -a"
