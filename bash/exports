@@ -39,7 +39,6 @@ __green=$(tput setaf 2)
 __red=$(tput setaf 1)
 __purple=$(tput setaf 7)
 __reset=$(tput sgr0)
-PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch)\[${__purple}\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch)[] $
 
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib

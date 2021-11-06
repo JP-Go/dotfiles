@@ -139,4 +139,5 @@ ex ()
 source ~/.config/bash/alias
 source ~/.config/bash/exports
 
+PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch)\[${__purple}\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch) $
 alias luamake=/home/jp/Builds/lua-language-server/3rd/luamake/luamake
