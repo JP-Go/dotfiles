@@ -140,4 +140,3 @@ source ~/.config/bash/alias
 source ~/.config/bash/exports
 
 alias luamake=/home/jp/Builds/lua-language-server/3rd/luamake/luamake
-eval "$(starship init bash)"
