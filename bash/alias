@@ -1,10 +1,10 @@
 #vim: set ft=bash
 
-if [[ -f /usr/bin/lsd ]]; then
-    alias ls="lsd " 
-    alias la="lsd -a"
-    alias ll="lsd -lh"
-    alias l="lsd -lh"
+if [[ -f /usr/bin/exa ]]; then
+    alias ls="exa --icons" 
+    alias la="exa -lah --icons"
+    alias ll="exa -lh --icons"
+    alias l="exa -lh --icons"
 fi
 alias vim="nvim"
 alias v="nvim"
