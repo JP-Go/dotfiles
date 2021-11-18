@@ -1,6 +1,6 @@
 #!/bin/bash
 
-selected=$(find ~/Fis-21-2/ ~/code/ ~/.dotfiles ~/Documentos -type d -not -wholename "*/.*" | fzf)
+selected=$(fd . /home/jp/ -t d -t l | fzf)
 
 if [[ $selected != "" ]]; then
    cd $selected 
