@@ -43,7 +43,7 @@ zstyle ':vcs_info:*' formats '%F{blue}%s(%F{green}%b%F{blue})%f ' # git(main)
 setopt prompt_subst
 # Set Prompt
 PROMPT='%B%F{magenta}%3~ %f%b${vcs_info_msg_0_}$ ' 
-RPROMPT='%B%(?.%F{green} %?%f.%F{red} %?%f)%b'
+RPROMPT='%B%(?.%F{green} %?%f.%F{red} %?%f)%b' 
 
 ## Other files
 source ~/.config/bash/exports

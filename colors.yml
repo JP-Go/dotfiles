@@ -144,4 +144,4 @@ schemes:
       cyan:    '#54ced6'
       white:   '#282a2e'
 
-colors: *onedark
+colors: *dracula
