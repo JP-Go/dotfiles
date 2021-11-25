@@ -33,7 +33,7 @@ schemes:
     - { index: 17, color: '#db4b4b' }
     
 
-# Colors (One Dark - https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
+# One Dark
   onedark: &onedark
     primary:
       background: '#282c34'
@@ -144,4 +144,35 @@ schemes:
       cyan:    '#54ced6'
       white:   '#282a2e'
 
-colors: *dracula
+# Duskfox
+  duskfox: &duskfox
+    #default
+    primary:
+      background : "#232136"
+      foreground : "#e0def4"
+
+    normal:
+      black  : "#393552"
+      red    : "#eb6f92"
+      green  : "#a3be8c"
+      yellow : "#f6c177"
+      blue   : "#569FBA"
+      magenta: "#c4a7e7"
+      cyan   : "#9ccfd8"
+      white  : "#e0def4"
+      orange : "#ea9a97"
+      pink   : "#EB98C3"
+    
+    bright:
+      black   : "#433C6E"
+      red     : "#EF7C9D"
+      green   : "#AECB93"
+      yellow  : "#F8C886"
+      blue    : "#5FABC7"
+      magenta : "#C8AEEB"
+      cyan    : "#A3D6DF"
+      white   : "#E1DFF6"
+      orange  : "#EDA19E"
+      pink    : "#EEA1C9"
+
+colors: *duskfox
