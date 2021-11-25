@@ -34,11 +34,6 @@ parse_git_branch() {
     fi
 }
 
-__blue=$(tput setaf 5)
-__green=$(tput setaf 2)
-__red=$(tput setaf 1)
-__purple=$(tput setaf 7)
-__reset=$(tput sgr0)
 
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib

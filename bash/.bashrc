@@ -136,8 +136,14 @@ ex ()
   fi
 }
 
+bind 'TAB:menu-complete'
 source ~/.config/bash/alias
 source ~/.config/bash/exports
 
-PS1='\[$(tput bold)\]\[${__blue}\]❱ \w\[${__green}\]$(parse_git_branch)\[${__purple}\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch) $
+__blue=$(tput setaf 5)
+__green=$(tput setaf 2)
+__red=$(tput setaf 1)
+__purple=$(tput setaf 7)
+__reset=$(tput sgr0)
+PS1='\[$(tput bold)\]\[${__blue}\]\w\[${__green}\]$(parse_git_branch)\[${__purple}\] \$ \[${__reset}\]';export PS1 # ~/some/path git(branch) $
 alias luamake=/home/jp/Builds/lua-language-server/3rd/luamake/luamake
