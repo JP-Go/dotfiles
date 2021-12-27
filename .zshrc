@@ -57,7 +57,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 }
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats '%F{blue}%s(%F{red}%m%u%c.%F{yellow}%F{green}%b%F{blue})%f ' # git(main)
+zstyle ':vcs_info:*' formats '%F{blue}%s(%F{red}%m%u%c %F{yellow}%F{green}%b%F{blue})%f ' # git(main)
 setopt prompt_subst
 # Set Prompt
 PROMPT='%B%F{magenta}%3~ %f%b${vcs_info_msg_0_}$ ' 
