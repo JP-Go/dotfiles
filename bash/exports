@@ -1,6 +1,4 @@
-#
-# vim:set ft=sh
-#
+# vim: set ft=sh
 
 # Set nvim as the default terminal editor
 EDITOR=nvim
@@ -38,13 +36,6 @@ parse_git_branch() {
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
-# Add jdt-ls and junit paths
+# Add Java related env vars
 export JDTLS_HOME=$HOME/.local/lib/java-lsp
 export JAVA_HOME=/usr/lib64/jvm/default/
-export JUNIT_HOME=/usr/share/java
-
-#Update java packages db for jdt-ls
-for package in $(find /usr/share/java -name '*.jar') ; do
-    CLASSPATH=$CLASSPATH:$package
-done
-CLASSPATH=$CLASSPATH:. ; export CLASSPATH
