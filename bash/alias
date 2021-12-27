@@ -6,8 +6,10 @@ if [[ -f /usr/bin/exa ]]; then
     alias ll="exa -lh --icons"
     alias l="exa -lh --icons"
 fi
-alias vim="nvim"
-alias v="nvim"
+if [[ -f /usr/bin/nvim ]]; then
+    alias vim="nvim"
+    alias v="nvim"
+fi
 
 if [[ -f /usr/bin/gs ]]; then 
     alias gita="git add"
@@ -23,7 +25,7 @@ else
     alias gp="git push"
 fi
 
-if [[ -f /usr/bin/lazygit ]] alias lg="lazygit"
+if [[ -f /usr/bin/lazygit ]]; then alias lg="lazygit" ; fi
 
 alias tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"
 alias goto=". ~/.dotfiles/scripts/goto.sh"
