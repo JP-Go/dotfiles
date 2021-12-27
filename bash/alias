@@ -1,4 +1,4 @@
-#vim: set ft=bash
+#vim: ft=bash
 
 if [[ -f /usr/bin/exa ]]; then
     alias ls="exa --icons" 
@@ -9,11 +9,21 @@ fi
 alias vim="nvim"
 alias v="nvim"
 
-alias gita="git add"
-alias gitc="git commit"
-alias gitd="git diff"
-alias gits="git status"
-alias gitp="git push"
+if [[ -f /usr/bin/gs ]]; then 
+    alias gita="git add"
+    alias gitc="git commit"
+    alias gitd="git diff"
+    alias gits="git status"
+    alias gitp="git push"
+else
+    alias ga="git add"
+    alias gc="git commit"
+    alias gd="git diff"
+    alias gs="git status"
+    alias gp="git push"
+fi
+
+if [[ -f /usr/bin/lazygit ]] alias lg="lazygit"
 
 alias tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"
 alias goto=". ~/.dotfiles/scripts/goto.sh"
