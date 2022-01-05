@@ -29,3 +29,4 @@ if [[ -f /usr/bin/lazygit ]]; then alias lg="lazygit" ; fi
 
 alias tlmgr="$TEXMFDIST/scripts/texlive/tlmgr.pl --usermode"
 alias goto=". ~/.dotfiles/scripts/goto.sh"
+alias cht.sh=". ~/.dotfiles/scripts/cht.sh"
