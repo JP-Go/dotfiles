@@ -16,7 +16,7 @@ TEXMFCONFIG=~/.texlive/texmf-config
 # Add perl scripts, ruby gems and cargo packages(rust) to PATH
 PATH=$PATH:/home/jp/.cargo/bin:/home/jp/.local/share/gem/ruby/3.0.0/bin
 PATH="/home/jp/perl5/bin${PATH:+:${PATH}}"; export PATH;
-. "$HOME/.cargo/env"
+if [[ -f $HOME/.cargo/env ]]; then . "$HOME/.cargo/env";fi
 
 # Add some perl env variables
 PERL5LIB="/home/jp/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -31,7 +31,6 @@ parse_git_branch() {
         echo " git:${branch/ /}"
     fi
 }
-
 
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
