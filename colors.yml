@@ -132,7 +132,6 @@ schemes:
       cyan:    '0x4c7a5d'
       white:   '0xe6d5ae'
 
-# Apply the color scheme.
   tokyonight : &tokyonight
   # TOKYONIGHT
     # Default colors
@@ -368,4 +367,4 @@ schemes:
       cyan:    '#427b58'
       white:   '#928374'
 
-colors: *tomorrow_night
+colors: *gruvbox_material_hard_dark
