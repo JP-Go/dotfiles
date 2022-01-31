@@ -71,3 +71,4 @@ fpath=(/usr/share/zsh/site-functions $fpath)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias luamake=/home/jp/Builds/lua-language-server/3rd/luamake/luamake
+source /usr/share/nvm/init-nvm.sh
