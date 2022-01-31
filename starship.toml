@@ -1,6 +1,6 @@
 add_newline = false
 format = "$username$hostname$shlvl$directory$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$docker_context$package$cmake$java$cmd_duration$status$jobs$character"
-command_timeout = 400
+command_timeout = 500
 [character]
 success_symbol = "[❯](bold green)"
 error_symbol = "[❯](bold red)"
