@@ -26,14 +26,14 @@ ln -sf $PWD/stylua.toml ~/.config/stylua.toml
 ln -s  $PWD/.gitconfig ~/.gitconfig
 
 if [[ -f /usr/bin/bspwm ]];then 
-  mkdir -p ~/.config/bspwm
-  mkdir -p ~/.config/sxhkd
+  if ! [[ -d ~/.config/bspwm/ ]];then mkdir -p ~/.config/bspwm; fi
+  if ! [[ -d ~/.config/sxhkd/ ]];then mkdir -p ~/.config/sxhkd; fi
   ln -sf $PWD/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
   ln -sf $PWD/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 fi
 
 if [[ -f /usr/bin/polybar ]];then 
-  mkdir -p ~/.config/polybar
+  if ! [[ -d ~/.config/polybar/ ]];then mkdir -p ~/.config/polybar; fi
   ln -sf $PWD/polybar/config ~/.config/polybar/config
   ln -sf $PWD/polybar/launch.sh ~/.config/polybar/launch.sh
 fi
