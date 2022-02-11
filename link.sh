@@ -22,6 +22,13 @@ if [[ -f /usr/bin/zsh ]];then
     ln -sf $PWD/.zshrc ~/.zshrc
 fi
 
+if [[ -f /usr/bin/kitty ]];then 
+    if ! [[ -d ~/.config/kitty/ ]];then mkdir -p ~/.config/kitty; fi
+    ln -s $PWD/kitty.conf ~/.config/kitty/kitty.conf
+    ln -s $PWD/duskfox.conf ~/.config/kitty/duskfox.conf
+    ln -s $PWD/dracula.conf ~/.config/kitty/dracula.conf
+fi
+
 ln -sf $PWD/stylua.toml ~/.config/stylua.toml
 ln -s  $PWD/.gitconfig ~/.gitconfig
 
