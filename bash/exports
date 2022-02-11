@@ -1,4 +1,4 @@
-# vim: set ft=sh
+# vim: ft=bash tw=2 sw=2
 
 # Set nvim as the default terminal editor
 EDITOR=nvim
