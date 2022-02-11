@@ -1,0 +1,26 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Launch polybar
+$HOME/.config/polybar/launch.sh
+
+# Launch picom
+pgrep -x picom > /dev/null || picom &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap           8
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' follow=on
+bspc rule -a firefox desktop='^2' follow=on
+bspc rule -a mpv state=floating
+
+feh --bg-fill $HOME/Imagens/wallpapers/forest.jpg
+
+# vim: ft=bash

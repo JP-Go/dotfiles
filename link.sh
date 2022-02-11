@@ -23,4 +23,17 @@ if [[ -f /usr/bin/zsh ]];then
 fi
 
 ln -sf $PWD/stylua.toml ~/.config/stylua.toml
-ln -s $PWD/.gitconfig ~/.gitconfig
+ln -s  $PWD/.gitconfig ~/.gitconfig
+
+if [[ -f /usr/bin/bspwm ]];then 
+  mkdir -p ~/.config/bspwm
+  mkdir -p ~/.config/sxhkd
+  ln -sf $PWD/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
+  ln -sf $PWD/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
+fi
+
+if [[ -f /usr/bin/polybar ]];then 
+  mkdir -p ~/.config/polybar
+  ln -sf $PWD/polybar/config ~/.config/polybar/config
+  ln -sf $PWD/polybar/launch.sh ~/.config/polybar/launch.sh
+fi
