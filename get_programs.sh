@@ -9,38 +9,42 @@ fi
 PACMAN=$1
 PACKS=""
 
-add_to_packs(){
+add_to_packs () {
     PACKS="$PACKS $1"
 }
 
-ask_for_option(){
-    local opt=$1
-    local len=$(( $# - 2))
-    echo "Which $1 would you like to use ($2 is the default)"
-    for VAR in $@[@]:1:$(( $len - 3 ))
+ask_for_option () {
+    local len=$(($# - 1))
+    local options=("$@")
+    echo $1
+    for i in $(seq 1 $len)
     do
-        echo "$VAR"
+      echo "$((i - 1)): ${options[$i]}"
     done
-    
 }
 
-ask_for_option a b c d
+read_option () {
+  while [[ 1 ]]; do
+    local choice=1
+    local options=("$@")
+    echo "Choice: "
+    read -r choice
+    if ! [[ $choice ]]; then 
+      choice=0
+    fi
+    local program=${options[$choice]}
+    if [[ $program ]] && [[ $choice =~ [0-9] ]]; then
+      echo "Chose $program"
+      add_to_packs "${program}"
+      break
+    else
+      echo "[ERROR] invalid option"
+    fi
+  done
 
-# TE=0
-# echo -e "Which terminal do you want?(default is alacritty) \n  0: alacritty\n  1: kitty"
-# echo "Choice: "
-# read -r TE
-# 
-# 
-# if [ "$TE" == '' ] || [ $TE == 0 ]; then
-#     add_to_packs "alacritty"
-#     echo "Chose alacritty"
-# fi
-# 
-# if [[ $TE == 1 ]]; then
-#     add_to_packs "kitty"
-#     echo "Chose kitty"
-# fi
-# 
-# echo $PACKS
-# echo "$PACMAN"
+}
+
+ask_for_option "Choose your prefered terminal emulator (alacritty is the default)" alacritty kitty
+read_option alacritty kitty
+
+echo $PACKS
