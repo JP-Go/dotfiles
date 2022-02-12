@@ -131,3 +131,7 @@ XF86AudioLowerVolume
 
 XF86AudioMute
   pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Change wallpaper
+super + ctrl + w
+  feh -z --bg-fill ~/Imagens/wallpapers
