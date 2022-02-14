@@ -1,3 +1,5 @@
+#!/usr/env python
+
 from os import EX_USAGE
 import sys
 
