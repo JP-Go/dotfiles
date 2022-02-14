@@ -124,13 +124,13 @@ super + {Left,Down,Up,Right}
 ## Custom keybindings
 # Volume control
 XF86AudioRaiseVolume
-  pactl set-sink-volume @DEFAULT_SINK@ +10%
+  amixer set Master 10%+
 
 XF86AudioLowerVolume
-  pactl set-sink-volume @DEFAULT_SINK@ -10%
+  amixer set Master 10%-
 
 XF86AudioMute
-  pactl set-sink-mute @DEFAULT_SINK@ toggle
+  amixer set Master toggle
 
 # Change wallpaper
 super + ctrl + w
