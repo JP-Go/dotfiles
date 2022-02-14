@@ -2,6 +2,7 @@
 color1="#BB9AF7"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
+xsetroot -cursor_name left_ptr &
 
 # Launch polybar
 $HOME/.config/polybar/launch.sh
