@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = date 
-modules-right = filesystem pulseaudio xkeyboard memory cpu eth temperature powermenu
+modules-right = filesystem alsa xkeyboard memory cpu eth temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -260,7 +260,7 @@ label-disconnected = %ifname% disconnected
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date = " %d %b %Y"
 date-alt = " %d %B %Y"
@@ -305,10 +305,10 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = 🔇
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
