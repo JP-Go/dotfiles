@@ -133,7 +133,6 @@ schemes:
       white:   '0xe6d5ae'
 
   tokyonight : &tokyonight
-  # TOKYONIGHT
     # Default colors
     primary:
       background: '#1a1b26'
