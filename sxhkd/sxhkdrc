@@ -124,13 +124,13 @@ super + {Left,Down,Up,Right}
 ## Custom keybindings
 # Volume control
 XF86AudioRaiseVolume
-  amixer set Master 10%+
+  amixer sset Master 10%+
 
 XF86AudioLowerVolume
-  amixer set Master 10%-
+  amixer sset Master 10%-
 
 XF86AudioMute
-  amixer set Master toggle
+  amixer sset Master toggle
 
 # Change wallpaper
 super + ctrl + w
