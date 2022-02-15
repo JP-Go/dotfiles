@@ -21,6 +21,6 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Firefox desktop='^2' follow=off state=monocle
-bspc rule -a mpv state=floating
+bspc rule -a mpv desktop='^4'  state=monocle follow=on
 
 feh --bg-fill --randomize $HOME/Imagens/wallpapers/
