@@ -73,7 +73,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = date 
-modules-right = filesystem alsa xkeyboard memory cpu eth temperature powermenu
+modules-right = filesystem pulseaudio xkeyboard memory cpu eth temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -260,7 +260,7 @@ ramp-signal-foreground = ${tokyo.foreground-alt}
 [module/eth]
 type = internal/network
 format-prefix = "歷 "
-interface = "enp2s0"
+interface = "enp3s0"
 interval = 3.0
 
 format-connected-underline = ${tokyo.green}
