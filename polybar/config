@@ -300,7 +300,7 @@ label-volume-foreground = ${root.foreground}
 label-muted = 🔇 muted
 label-muted-foreground = ${tokyo.foreground-alt}
 
-bar-volume-width = 9
+bar-volume-width = 10
 bar-volume-foreground-0 = ${tokyo.green}
 bar-volume-foreground-1 = ${tokyo.green}
 bar-volume-foreground-2 = ${tokyo.green}
