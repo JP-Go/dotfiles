@@ -20,7 +20,7 @@ fi
 
 # Zsh config
 if [[ -f /usr/bin/zsh ]];then 
-    ln -sf $PWD/.zshrc ~/.zshrc
+    ln -sf $PWD/zshrc ~/.zshrc
 fi
 
 if [[ -f /usr/bin/kitty ]];then 
