@@ -132,6 +132,8 @@ XF86AudioLowerVolume
 XF86AudioMute
   amixer sset Master toggle
 
+# XF86MonBrightnessUp
+  
 # Change wallpaper
 super + ctrl + w
   feh -z --bg-fill ~/Imagens/wallpapers
