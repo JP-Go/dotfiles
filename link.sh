@@ -13,9 +13,7 @@ ln -sf $PWD/bash/exports ~/.config/bash/exports
 
 # Alacritty config if it's installed
 if [[ -f /usr/bin/alacritty ]]; then
-    if ! [[ -d ~/.config/alacritty/ ]];then mkdir -p ~/.config/alacritty; fi
-    ln -s $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-    ln -s $PWD/alacritty/colors.yml ~/.config/alacritty/colors.yml
+  ln -s $PWD/alacritty ~/.config/
 fi
 
 # Zsh config
@@ -24,10 +22,7 @@ if [[ -f /usr/bin/zsh ]];then
 fi
 
 if [[ -f /usr/bin/kitty ]];then 
-    if ! [[ -d ~/.config/kitty/ ]];then mkdir -p ~/.config/kitty; fi
-    ln -s $PWD/kitty/kitty.conf ~/.config/kitty/kitty.conf
-    ln -s $PWD/kitty/duskfox.conf ~/.config/kitty/duskfox.conf
-    ln -s $PWD/kitty/dracula.conf ~/.config/kitty/dracula.conf
+    ln -s $PWD/kitty ~/.config/
 fi
 
 ln -sf $PWD/stylua.toml ~/.config/stylua.toml
