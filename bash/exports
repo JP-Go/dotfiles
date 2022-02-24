@@ -37,3 +37,5 @@ parse_git_branch() {
 
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+export BW_CLIENTSECRET=$(cat ~/.dotfiles/secret)
+
