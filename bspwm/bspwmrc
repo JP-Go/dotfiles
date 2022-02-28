@@ -11,7 +11,7 @@ pgrep -x picom > /dev/null || picom &
 
 bspc monitor -d I II III IV V VI
 
-bspc config border_width          2
+bspc config border_width          3
 bspc config focused_border_color  $color1
 bspc config window_gap            6
 
