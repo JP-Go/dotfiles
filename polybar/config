@@ -73,7 +73,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = date 
-modules-right = filesystem pulseaudio xkeyboard memory cpu eth temperature powermenu
+modules-right = filesystem pulseaudio xkeyboard memory cpu eth wlan temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -237,24 +237,24 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlan2
+interface = "wlp4s0"
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${tokyo.purle}
 label-connected = %essid%
 
-format-disconnected =
+format-disconnected = "睊"
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${tokyo.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = "V.Low"
+ramp-signal-1 = "Low"
+ramp-signal-2 = "Reg"
+ramp-signal-3 = "Good"
+ramp-signal-4 = "Laiza "
 ramp-signal-foreground = ${tokyo.foreground-alt}
 
 [module/eth]
