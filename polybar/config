@@ -76,8 +76,8 @@ locale= pt_BR.UTF-8
 
 ;override-redirect = true
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -253,10 +253,10 @@ label-connected-background = ${tokyo.background-alt}
 label-connected-foreground = ${tokyo.foreground-alt}
 
 
-format-disconnected = "睊"
-;format-disconnected = <label-disconnected>
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${tokyo.foreground}
+format-disconnected= 睊
+format-disconnected-padding = 1
+format-disconnected-background = ${tokyo.red}
+format-disconnected-foreground = ${tokyo.foreground-alt}
 
 ramp-signal-padding-right=1
 ramp-signal-0 = "VL"
@@ -273,10 +273,14 @@ interface = "enp3s0"
 interval = 3.0
 
 format-connected-prefix = ﯲ
-format-connected-prefix-paddding = 1
+format-connected-prefix-padding = 1
 format-connected-prefix-foreground = ${tokyo.foreground-alt}
 format-connected-prefix-background = ${tokyo.green}
-label-connected = %ifname% %local_ip%
+label-connected = %local_ip%
+label-connected-padding = 1
+label-connected-foreground = ${tokyo.foreground-alt}
+label-connected-background = ${tokyo.background-alt}
+
 
 format-disconnected-prefix = 
 format-disconnected-prefix-padding = 1
