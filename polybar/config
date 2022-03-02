@@ -15,22 +15,13 @@
 ;   The README contains a lot of information
 ;
 ;==========================================================
-[colors]
-;background = ${xrdb:color0:#222}
-background = #1a1b26
-background-alt = #414868
-;foreground = ${xrdb:color7:#222}
-foreground = #c0caf5
-foreground-alt = #a9b1d6
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
 
 [tokyo]
 background = #1a1b26
-background-alt = #414868
-foreground = #c0caf5
-foreground-alt = #a9b1d6
+foreground = #a9b1d6
+foreground-alt = ${self.background}
+background-alt = ${self.foreground}
+underline = ${self.background}
 primary = #e0af68
 secondary = #f7768e
 alert = #f7768e
@@ -49,7 +40,7 @@ width = 100%
 height = 26
 ; offset-x = 2.5%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = false
 
 background = ${tokyo.background}
@@ -58,22 +49,22 @@ foreground = ${tokyo.foreground}
 line-size = 2
 line-color = ${tokyo.red}
 
-border-size = 2
-border-color = #00000000
+border-size = 6
+border-color = ${tokyo.background}
 
-padding-left = 2
-padding-right = 2
+padding-left = 0
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = FuraCode Nerd Font:fontformat=truetype:size=9:antialias=true;0
+font-0 = FuraCode Nerd Font:size=9:antialias=true;0
 font-1 = fixed:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = date 
-modules-right = filesystem pulseaudio xkeyboard memory cpu eth wlan temperature powermenu
+modules-center = date
+modules-right = pulseaudio xkeyboard xbacklight memory cpu eth wlan temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -102,17 +93,20 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = 
+format-prefix-padding = 1
 format-prefix-foreground = ${tokyo.foreground-alt}
-format-prefix-underline = ${tokyo.secondary}
+format-prefix-background = ${tokyo.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${tokyo.secondary}
+label-layout-padding = 1
+label-layout-foreground = ${tokyo.foreground-alt}
+label-layout-background = ${tokyo.background-alt}
 
-label-indicator-padding = 2
-label-indicator-margin = 1
+label-indicator-padding = 1
+label-indicator-margin = 0
 label-indicator-background = ${tokyo.secondary}
-label-indicator-underline = ${tokyo.secondary}
+label-indicator-foreground = ${tokyo.foreground-alt}
 
 [module/filesystem]
 type = internal/fs
@@ -122,17 +116,19 @@ mount-0 = /
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${tokyo.foreground-alt}
+label-unmounted-foreground = ${tokyo.foreground}
 
 [module/bspwm]
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${tokyo.background-alt}
-label-focused-underline= ${tokyo.primary}
+label-focused-background = ${tokyo.blue}
+label-focused-foreground = ${tokyo.foreground-alt}
 label-focused-padding = 2
 
 label-occupied = %index%
+label-occupied-foreground = ${tokyo.foreground-alt}
+label-occupied-background = ${tokyo.background-alt}
 label-occupied-padding = 2
 
 label-urgent = %index%!
@@ -141,6 +137,7 @@ label-urgent-padding = 2
 
 label-empty = %index%
 label-empty-foreground = ${tokyo.foreground-alt}
+label-empty-background = ${tokyo.background-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
@@ -162,7 +159,6 @@ label-mode-background = ${tokyo.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${tokyo.background-alt}
-label-focused-underline= ${tokyo.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -172,7 +168,6 @@ label-unfocused-padding = 2
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
@@ -212,7 +207,7 @@ bar-fill-font = 2
 bar-fill-foreground = ${tokyo.purple}
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${tokyo.foreground-alt}
+bar-empty-foreground = ${tokyo.foreground}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -222,57 +217,77 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = 
+format-prefix-padding = 1
 format-prefix-foreground = ${tokyo.foreground-alt}
-format-underline = ${tokyo.purple}
-label = %percentage:2%%
+format-prefix-background = ${tokyo.purple}
+label = "%percentage:3%% "
+label-foreground = ${tokyo.foreground-alt}
+label-background = ${tokyo.background-alt}
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = 
+format-prefix-padding = 1
 format-prefix-foreground = ${tokyo.foreground-alt}
-format-underline = ${tokyo.cyan}
-label = %percentage_used%%
+format-prefix-background = ${tokyo.green}
+label = %percentage_used:3%%
+label-padding = 1
+label-foreground = ${tokyo.foreground-alt}
+label-background = ${tokyo.background-alt}
 
 [module/wlan]
 type = internal/network
 interface = "wlp4s0"
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = ${tokyo.purle}
+format-connected-prefix = 直
+format-connected-prefix-padding = 1
+format-connected-prefix-background = ${tokyo.cyan}
+format-connected-prefix-foreground = ${tokyo.foreground-alt}
+format-connected = <label-connected><ramp-signal>
 label-connected = %essid%
+label-connected-padding = 1
+label-connected-background = ${tokyo.background-alt}
+label-connected-foreground = ${tokyo.foreground-alt}
+
 
 format-disconnected = "睊"
 ;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${tokyo.foreground-alt}
+;label-disconnected-foreground = ${tokyo.foreground}
 
-ramp-signal-0 = "V.Low"
-ramp-signal-1 = "Low"
-ramp-signal-2 = "Reg"
-ramp-signal-3 = "Good"
-ramp-signal-4 = "Laiza "
+ramp-signal-padding-right=1
+ramp-signal-0 = "VL"
+ramp-signal-1 = "L"
+ramp-signal-2 = "R"
+ramp-signal-3 = "G"
+ramp-signal-4 = "🔆 Laiza "
 ramp-signal-foreground = ${tokyo.foreground-alt}
+ramp-signal-background = ${tokyo.background-alt}
 
 [module/eth]
 type = internal/network
-format-prefix = "歷 "
 interface = "enp3s0"
 interval = 3.0
 
-format-connected-underline = ${tokyo.green}
-format-connected-prefix = "ﯲ "
+format-connected-prefix = ﯲ
+format-connected-prefix-paddding = 1
 format-connected-prefix-foreground = ${tokyo.foreground-alt}
-label-connected = %local_ip%
+format-connected-prefix-background = ${tokyo.green}
+label-connected = %ifname% %local_ip%
 
-format-disconnected = " "
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${tokyo.foreground-alt}
+format-disconnected-prefix = 
+format-disconnected-prefix-padding = 1
+format-disconnected-prefix-foreground = ${tokyo.foreground-alt}
+format-disconnected-prefix-background = ${tokyo.orange}
+
+format-disconnected = <label-disconnected>
+label-disconnected =  None
+label-disconnected-padding = 1
+label-disconnected-foreground = ${tokyo.foreground-alt}
+label-disconnected-background = ${tokyo.background-alt}
 
 [module/date]
 type = internal/date
@@ -284,38 +299,36 @@ date-alt = " %d %B %Y"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${tokyo.foreground-alt}
-format-underline = ${tokyo.blue}
+format-prefix-background = ${tokyo.blue}
 
-label = %date% %time%
+label = "%date% %time% "
+format-foreground = ${tokyo.foreground-alt}
+format-background = ${tokyo.background-alt}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+format-volume = <label-volume>
+format-volume-prefix = 
+format-volume-prefix-padding = 1
+format-volume-prefix-foreground = ${tokyo.foreground-alt}
+format-volume-prefix-background = ${tokyo.yellow}
+label-volume = %percentage:3%%
+label-volume-padding = 1
+label-volume-foreground = ${tokyo.foreground-alt}
+label-volume-background = ${tokyo.background-alt}
 
-label-muted = 🔇 muted
+format-muted = <label-muted>
+label-muted = mute
+format-muted-prefix = ﱝ
+format-muted-prefix-padding = 1
+format-muted-prefix-foreground = ${tokyo.foreground-alt}
+format-muted-prefix-background = ${tokyo.yellow}
+label-muted-padding = 1
 label-muted-foreground = ${tokyo.foreground-alt}
-
-bar-volume-width = 10
-bar-volume-foreground-0 = ${tokyo.green}
-bar-volume-foreground-1 = ${tokyo.green}
-bar-volume-foreground-2 = ${tokyo.green}
-bar-volume-foreground-3 = ${tokyo.green}
-bar-volume-foreground-4 = ${tokyo.green}
-bar-volume-foreground-5 = ${tokyo.orange}
-bar-volume-foreground-6 = ${tokyo.red}
-bar-volume-gradient = true
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${tokyo.foreground-alt}
+label-muted-background = ${tokyo.background-alt}
 
 [module/alsa]
 type = internal/alsa
@@ -325,7 +338,7 @@ label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = 🔇
-format-muted-foreground = ${tokyo.foreground-alt}
+format-muted-foreground = ${tokyo.foreground}
 label-muted = sound muted
 
 bar-volume-width = 10
@@ -343,7 +356,7 @@ bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${tokyo.foreground-alt}
+bar-volume-empty-foreground = ${tokyo.foreground}
 
 [module/battery]
 type = internal/battery
@@ -352,30 +365,27 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${tokyo.yellow}
 
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${tokyo.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-prefix-foreground = ${tokyo.foreground}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
-ramp-capacity-foreground = ${tokyo.foreground-alt}
+ramp-capacity-foreground = ${tokyo.foreground}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
-animation-charging-foreground = ${tokyo.foreground-alt}
+animation-charging-foreground = ${tokyo.foreground}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
-animation-discharging-foreground = ${tokyo.foreground-alt}
+animation-discharging-foreground = ${tokyo.foreground}
 animation-discharging-framerate = 750
 
 [module/temperature]
@@ -383,19 +393,24 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
-format-underline = ${tokyo.red}
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format = <ramp><label>
+format-warn = <ramp><label-warn>
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${tokyo.secondary}
+label-padding = 1
+label-warn-padding = 1
+label-foreground = ${tokyo.foreground-alt}
+label-background = ${tokyo.background-alt}
+label-warn-foreground = ${tokyo.foreground-alt}
+label-warn-background = ${tokyo.background-alt}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 滛
+ramp-2 = 
 ramp-foreground = ${tokyo.foreground-alt}
+ramp-background = ${tokyo.blue}
+ramp-padding = 1
 
 [module/powermenu]
 type = custom/menu
@@ -409,7 +424,7 @@ label-open-foreground = ${tokyo.secondary}
 label-close =  cancel
 label-close-foreground = ${tokyo.secondary}
 label-separator = |
-label-separator-foreground = ${tokyo.foreground-alt}
+label-separator-foreground = ${tokyo.foreground}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
