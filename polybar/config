@@ -37,7 +37,7 @@ yellow = #e0af68
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 26
+height = 24
 ; offset-x = 2.5%
 ;offset-y = 1%
 radius = 0.0
@@ -46,7 +46,7 @@ fixed-center = false
 background = ${tokyo.background}
 foreground = ${tokyo.foreground}
 
-line-size = 2
+line-size = 1
 line-color = ${tokyo.red}
 
 border-size = 6
