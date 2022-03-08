@@ -195,19 +195,14 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = ${tokyo.purple}
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${tokyo.foreground}
+format = <label>
+format-prefix = "ﯦ"
+format-prefix-padding = 1 
+format-prefix-foreground = ${tokyo.foreground-alt}
+format-prefix-background = ${tokyo.cyan}
+label-padding = 1
+label-background = ${tokyo.background-alt}
+label-foreground = ${tokyo.foreground-alt}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -372,8 +367,10 @@ format-charging = <animation-charging><label-charging>
 
 format-discharging = <animation-discharging><label-discharging>
 
-format-full-prefix = " "
+format-full-prefix = ""
 format-full-prefix-foreground = ${tokyo.foreground-alt}
+format-full-prefix-background = ${tokyo.yellow}
+format-full-prefix-padding = 1
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -391,6 +388,7 @@ animation-charging-foreground = ${tokyo.foreground-alt}
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
+animation-discharging-padding = 1
 animation-discharging-framerate = 750
 animation-discharging-background = ${tokyo.yellow}
 animation-discharging-foreground = ${tokyo.foreground-alt}
