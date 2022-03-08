@@ -21,6 +21,5 @@ bspc config gapless_monocle      true
 
 bspc rule -a firefox desktop='^2' follow=off state=monocle
 bspc rule -a mpv desktop='^4'  state=monocle follow=on
-bspc rule -a Emacs state=tiled follow=on
 
 feh --bg-fill --randomize $HOME/Imagens/wallpapers/
