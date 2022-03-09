@@ -3,7 +3,7 @@
 from os import EX_USAGE
 import sys
 from typing import Sequence
-from constants import DE_OR_WM, TERMINAL_EMULATORS
+from constants import DE_OR_WM_BUNDLES, TERMINAL_EMULATORS
 from pickers import pick_program, pick_among_programs, pick_among_bundles
 
 
@@ -34,8 +34,8 @@ if __name__ == "__main__":
     print()
 
     print("Which DE or WM would you like to use? ")
-    enumerate_options(DE_OR_WM)
-    picks = pick_among_bundles(DE_OR_WM, picks)
+    enumerate_options(DE_OR_WM_BUNDLES)
+    picks = pick_among_bundles(DE_OR_WM_BUNDLES, picks)
     print()
 
     print("Would you like to use polybar?")
