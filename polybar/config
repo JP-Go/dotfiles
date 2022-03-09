@@ -258,7 +258,7 @@ ramp-signal-0 = "Péssimo"
 ramp-signal-1 = "Ruim"
 ramp-signal-2 = "Reg"
 ramp-signal-3 = "Bom"
-ramp-signal-4 = "🔆 Laiza " ; ótimo
+ramp-signal-4 = "🔆 Laiza "
 ramp-signal-foreground = ${tokyo.foreground-alt}
 ramp-signal-background = ${tokyo.background-alt}
 
