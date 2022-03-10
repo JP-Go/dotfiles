@@ -3,10 +3,8 @@ from input_handlers import read_user_input, get_answer
 
 
 def pick_among_programs(
-        programs: Sequence[str],
-        picks_list: list[str | None] = None) -> list[str | None]:
-    if picks_list is None:
-        picks_list = []
+    programs: Sequence[str], picks_list: list[str | None]
+) -> list[str | None]:
     while True:
         user_choice = read_user_input(len(programs))
         if user_choice is None:
@@ -17,10 +15,8 @@ def pick_among_programs(
 
 
 def pick_among_bundles(
-        bundles_dict: dict[str, list[str]],
-        picks_list: list[str | None] = None) -> list[str | None]:
-    if picks_list is None:
-        picks_list = []
+    bundles_dict: dict[str, list[str]], picks_list: list[str | None]
+) -> list[str | None]:
     bundles_names = list(bundles_dict.keys())
     while True:
         user_choice = read_user_input(len(bundles_names))
@@ -32,9 +28,7 @@ def pick_among_bundles(
         return picks_list
 
 
-def pick_program(
-        program: str,
-        picks_list: list[str | None] | None = None) -> list[str | None]:
+def pick_program(program: str, picks_list: list[str | None]) -> list[str | None]:
     if picks_list is None:
         picks_list = []
     while True:
