@@ -2,6 +2,7 @@
 color1="#BB9AF7"
 
 pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x dunst > /dev/null || dunst &
 
 # Launch polybar
 $HOME/.config/polybar/launch.sh
