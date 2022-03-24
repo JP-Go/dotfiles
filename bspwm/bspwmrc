@@ -1,14 +1,14 @@
 #! /bin/sh
 color1="#BB9AF7"
 
+# Launch services first
+pgrep -x picom > /dev/null || picom &
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x dunst > /dev/null || dunst &
 
+feh --bg-fill --randomize $HOME/Imagens/wallpapers/
 # Launch polybar
 $HOME/.config/polybar/launch.sh
-
-# Launch picom
-pgrep -x picom > /dev/null || picom &
 
 bspc monitor -d I II III IV V VI
 
@@ -23,4 +23,3 @@ bspc config gapless_monocle      true
 bspc rule -a firefox desktop='^2' follow=off state=monocle
 bspc rule -a mpv desktop='^4'  state=monocle follow=on
 
-feh --bg-fill --randomize $HOME/Imagens/wallpapers/
