@@ -37,6 +37,6 @@ fi
 
 if [[ -f /usr/bin/polybar ]];then 
   if ! [[ -d ~/.config/polybar/ ]];then mkdir -p ~/.config/polybar; fi
-  ln -sf $PWD/polybar/config ~/.config/polybar/config
+  ln -sf $PWD/polybar/config.ini ~/.config/polybar/config.ini
   ln -sf $PWD/polybar/launch.sh ~/.config/polybar/launch.sh
 fi
