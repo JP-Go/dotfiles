@@ -11,22 +11,13 @@ ln -sf $PWD/bash/.bashrc ~/.bashrc
 ln -sf $PWD/bash/alias ~/.config/bash/alias
 ln -sf $PWD/bash/exports ~/.config/bash/exports
 
-# Alacritty config if it's installed
-if [[ -f /usr/bin/alacritty ]]; then
-  ln -s $PWD/alacritty ~/.config/
-fi
+# Basic workflow packages
+[[ -f /usr/bin/alacritty ]] && ln -s $PWD/alacritty ~/.config/
+[[ -f /usr/bin/zsh ]] && ln -sf $PWD/zshrc ~/.zshrc
+[[ -f /usr/bin/kitty ]] && ln -s $PWD/kitty ~/.config/
+[[ -f /usr/bin/git ]] && ln -s  $PWD/.gitconfig ~/.gitconfig
 
-# Zsh config
-if [[ -f /usr/bin/zsh ]];then 
-    ln -sf $PWD/zshrc ~/.zshrc
-fi
-
-if [[ -f /usr/bin/kitty ]];then 
-    ln -s $PWD/kitty ~/.config/
-fi
-
-ln -sf $PWD/stylua.toml ~/.config/stylua.toml
-ln -s  $PWD/.gitconfig ~/.gitconfig
+[[ -f $HOME/.cargo/bin/stylua ]] &&  ln -sf $PWD/stylua.toml ~/.config/stylua.toml
 
 if [[ -f /usr/bin/bspwm ]];then 
   if ! [[ -d ~/.config/bspwm/ ]];then mkdir -p ~/.config/bspwm; fi
