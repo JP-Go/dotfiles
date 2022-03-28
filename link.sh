@@ -18,6 +18,7 @@ ln -sf $PWD/bash/exports ~/.config/bash/exports
 [[ -f /usr/bin/git ]] && ln -s  $PWD/.gitconfig ~/.gitconfig
 
 [[ -f $HOME/.cargo/bin/stylua ]] &&  ln -sf $PWD/stylua.toml ~/.config/stylua.toml
+[[ -f /usr/bin/starship ]] || [[ -f $HOME/.cargo/bin/starship ]] && ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 if [[ -f /usr/bin/bspwm ]];then 
   if ! [[ -d ~/.config/bspwm/ ]];then mkdir -p ~/.config/bspwm; fi
