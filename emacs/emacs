@@ -13,8 +13,10 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-;; Good theme
-(load-theme 'tango-dark t)
+;; No autosave and no backup pls
+(setq auto-save-default nil)
+(setq create-lockfiles nil)
+(setq make-backup-files nil)
 ;; Stop it, emacs-san, dont put it in there
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 ;; Use emacs default project manager
