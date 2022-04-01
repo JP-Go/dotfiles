@@ -69,13 +69,17 @@
   :bind ("C-x g" . magit-status))
 ;; Good completions
 (use-package counsel
-  :bind (("M-x" . counsel-M-x)
-	 ("C-x C-b" . counsel-ibuffer)
+  :bind (("C-s" . swiper)
+	 ("M-x" . counsel-M-x)
+	 ("C-x b" . counsel-ibuffer)
 	 ("C-x C-f" . counsel-find-file)))
 ;; Lets get some themes
 (use-package doom-themes
   :config
-  (load-theme 'doom-gruvbox t))
+  (load-theme 'doom-tokyo-night t))
+(use-package mood-line
+  :config
+  (mood-line-mode))
 ;; Define keybindings, general
 (use-package general)
 (general-evil-setup t)
