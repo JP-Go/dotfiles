@@ -1,45 +1,47 @@
+;;; BASICS
+;; Cant handle this ugly screen
 (setq inhibit-startup-message t)
+(setq initial-scratch-message ";; Hello João")
+;; Yes or no? More like y or n 
+(defalias 'yes-or-no-p 'y-or-n-p)
+;; I like line numbers
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode 1)
+;; Remove bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-
+;; Good theme
 (load-theme 'tango-dark t)
+;; Stop it, emacs-san, dont put it in there
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+;; Use emacs default project manager
+(require 'project)
+;; Function to set my fonts
+(setq favorite-font "JetBrainsMono Nerd Font")
+(defun set-font-faces (font-face height) 
+     (set-face-attribute 'default nil :font font-face :height height)
+(if (member favorite-font (font-family-list))
+    (set-font-faces favorite-font 120)
+    (set-face-attribute 'default nil :height 120)
+    (set-face-attribute 'variable-pitch nil :height 120))
+
+;;; PACKAGES
+;; Activate package manager
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-(require 'project)
-
-(defun set-font-faces (font-face height) 
-     (set-face-attribute 'default nil :font font-face :height height)
-     (set-face-attribute 'variable-pitch nil :font font-face :height height))
-
-(if (member "JetBrainsMono Nerd Font" (font-family-list))
-    (set-font-faces "JetBrainsMono Nerd Font" 110)
-  )
+;; Use package to use packages
 (require 'use-package)
-(setq use-package-always-ensure t)
+(setq use-package-always-ensure t) ;; install all packages
+;; Lets get evil
 (use-package evil
   :init 
   (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
   :ensure t
   :config (evil-mode 1))
-
 (use-package evil-collection
   :after evil
   :config (evil-collection-init))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil-collection evil-integration evil use-package))
- '(show-paren-mode t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
