@@ -2,6 +2,8 @@
 ;; Cant handle this ugly screen
 (setq inhibit-startup-message t)
 (setq initial-scratch-message ";; Hello João")
+;; Can I use escape to, idk, ESCAPE!
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 ;; Yes or no? More like y or n 
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;; I like line numbers
@@ -39,7 +41,7 @@
 (setq use-package-always-ensure t) ;; install all packages
 ;; Ido because tsoding recommended
 (require 'ido)
-(ido-mode)
+(ido-mode 1)
 ;; Lets get evil
 (setq evil-want-keybinding nil)
 (use-package evil
@@ -50,14 +52,39 @@
   (evil-mode 1))
 (use-package evil-collection
   :after evil
-  :diminish t
+  :diminish
   :config
   (evil-collection-init))
+;; I need to be shown some keybindings
 (use-package which-key
-  :diminish t
+  :diminish
   :init
-  (setq which-key-delay 0)
+  (setq which-key-delay 0.3)
   :config
   (which-key-mode))
+;; The best plugin ever
 (use-package magit
   :bind ("C-x g" . magit-status))
+;; Good completions
+(use-package counsel
+  :bind (("M-x" . counsel-M-x)
+	 ("C-x C-b" . counsel-ibuffer)
+	 ("C-x C-f" . counsel-find-file)))
+;; Lets get some themes
+(use-package doom-themes
+  :config
+  (load-theme 'doom-gruvbox t))
+;; Define keybindings, general
+(use-package general)
+(general-evil-setup t)
+;; * Mode Keybindings
+(nmap
+  :keymaps 'emacs-lisp-mode-map
+  "K" 'elisp-slime-nav-describe-elisp-thing-at-point)
+(nmap
+ :prefix "SPC"
+ "n g" 'magit-status)
+
+(nmap
+  :keymaps 'with-editor-mode-map
+  "q" 'with-editor-finish)
