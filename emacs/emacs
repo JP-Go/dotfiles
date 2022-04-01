@@ -10,6 +10,7 @@
 ;; Remove bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 ;; Good theme
 (load-theme 'tango-dark t)
 ;; Stop it, emacs-san, dont put it in there
@@ -19,7 +20,8 @@
 ;; Function to set my fonts
 (setq favorite-font "JetBrainsMono Nerd Font")
 (defun set-font-faces (font-face height) 
-     (set-face-attribute 'default nil :font font-face :height height)
+    (set-face-attribute 'default nil :font font-face :height height)
+    (set-face-attribute 'variable-pitch nil :font font-face :height 120))
 (if (member favorite-font (font-family-list))
     (set-font-faces favorite-font 120)
     (set-face-attribute 'default nil :height 120)
