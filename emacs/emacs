@@ -87,10 +87,14 @@
 (nmap
   :keymaps 'emacs-lisp-mode-map
   "K" 'elisp-slime-nav-describe-elisp-thing-at-point)
+;; Bring some of my vim keybindings here (this is evil)
 (nmap
  :prefix "SPC"
- "n g" 'magit-status)
-
+ "n g" 'magit-status
+ "q" 'kill-buffer
+ "b" 'counsel-ibuffer
+ "e" 'dired)
+;; Use q to quit commit editing
 (nmap
   :keymaps 'with-editor-mode-map
   "q" 'with-editor-finish)
