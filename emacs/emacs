@@ -25,11 +25,11 @@
 (setq favorite-font "JetBrainsMono Nerd Font")
 (defun set-font-faces (font-face height) 
     (set-face-attribute 'default nil :font font-face :height height)
-    (set-face-attribute 'variable-pitch nil :font font-face :height 120))
+    (set-face-attribute 'variable-pitch nil :font font-face :height 110))
 (if (member favorite-font (font-family-list))
-    (set-font-faces favorite-font 120)
-    (set-face-attribute 'default nil :height 120)
-    (set-face-attribute 'variable-pitch nil :height 120))
+    (set-font-faces favorite-font 130)
+    (set-face-attribute 'default nil :height 130)
+    (set-face-attribute 'variable-pitch nil :height 130))
 
 ;;; PACKAGES
 ;; Activate package manager
