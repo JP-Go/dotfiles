@@ -93,8 +93,23 @@
  "n g" 'magit-status
  "q" 'kill-buffer
  "b" 'counsel-ibuffer
- "e" 'dired)
-;; Use q to quit commit editing
+ "e" 'dired
+ "f" 'counsel-find-file)
+;; Use q to quit commit editing in magit
 (nmap
   :keymaps 'with-editor-mode-map
-  "q" 'with-editor-finish)
+  "q" 'with-editor-finish
+  "C-c" 'with-editor-cancel)
+;; I'm blind. Let me increase the font
+(nmap
+  "C-=" 'text-scale-increase
+  "C--" 'text-scale-decrease)
+;; Make emacs helpful
+(use-package helpful)
+(nmap
+ "C-h f" 'helpful-callable
+ "C-h v" 'helpful-variable
+ "C-h k" 'helpful-key
+ "C-h F" 'helpful-function
+ "C-h C" 'helpful-command
+ "C-c C-d" 'helpful-at-point)
