@@ -22,6 +22,6 @@ bspc config gapless_monocle      true
 
 bspc rule -a firefox desktop='^2' follow=off 
 bspc rule -a mpv desktop='^4'  state=monocle follow=on
-bspc rule -a Emacs desktop='^5' state=tiled,monocle follow=on
+bspc rule -a Emacs desktop='^1' state=tiled,monocle follow=on
 bspc rule -a Inkscape desktop='^6'  state=monocle follow=off
 
