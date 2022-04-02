@@ -70,16 +70,45 @@
 ;; Good completions
 (use-package counsel
   :bind (("C-s" . swiper)
+	 ("C-c C-c" . counsel-git-checkout)
 	 ("M-x" . counsel-M-x)
 	 ("C-x b" . counsel-ibuffer)
 	 ("C-x C-f" . counsel-find-file)))
-;; Lets get some themes
+;; Lets get some themes installed
 (use-package doom-themes
   :config
-  (load-theme 'doom-tokyo-night t))
-(use-package mood-line
+  (load-theme 'doom-acario-dark t))
+(use-package all-the-icons)
+(use-package doom-modeline
+  :init
+  (setq doom-modeline-unicode-fallback t)
+  (setq doom-modeline-height 4)
   :config
-  (mood-line-mode))
+  (doom-modeline-mode))
+;; Basic config for some programming languages
+(use-package yaml-mode)
+(use-package json-mode)
+(use-package markdown-mode)
+(use-package typescript-mode
+  :mode ("\\.ts[x]*?\\'" . typescript-mode))
+(use-package company
+  :init
+  (setq company-minimum-prefix-length 2)
+  :config
+  (global-company-mode)
+  (company-tng-configure-default))
+
+;; CODING
+;; Lsp with eglot
+(global-eldoc-mode) ;; Documentation on everything
+(use-package eglot)
+(add-hook 'prog-mode-hook 'eglot-ensure)
+;; Config for python dev
+(use-package python-mode
+  :mode ("\\.py?\\'" . python-mode))
+(use-package pyvenv)
+
+;; MISCELANEOUS
 ;; Define keybindings, general
 (use-package general)
 (general-evil-setup t)
