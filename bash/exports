@@ -5,10 +5,10 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # Configure TeX enviroment variables
-export TEXMFDIST=/usr/share/texmf-dist
-export TEXMFLOCAL=/usr/local/share/texmf:/usr/share/texmf
+export TEXMFDIST=/usr/share/texlive/texmf-dist
+export TEXMFLOCAL=/usr/share/texlive/texmf-local:/usr/share/texmf
 export TEXMFSYSVAR=/var/lib/texmf
-export TEXMFSYSCONFIG=/etc/texmf
+export TEXMFSYSCONFIG=/etc/texlive/
 export TEXMFHOME=~/texmf
 export TEXMFVAR=~/.texlive/texmf-var
 export TEXMFCONFIG=~/.texlive/texmf-config
