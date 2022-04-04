@@ -35,6 +35,7 @@
 ;; Activate package manager
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -103,6 +104,7 @@
 (global-eldoc-mode) ;; Documentation on everything
 (use-package eglot)
 (add-hook 'prog-mode-hook 'eglot-ensure)
+(remove-hook 'emacs-lisp-mode 'eglot-ensure) 
 ;; Config for python dev
 (use-package python-mode
   :mode ("\\.py?\\'" . python-mode))
