@@ -20,6 +20,6 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a firefox desktop='^2' follow=off 
+bspc rule -a firefox desktop='^3' follow=off 
 bspc rule -a mpv desktop='^4'  state=monocle follow=on
 bspc rule -a Inkscape desktop='^6'  state=monocle follow=off
