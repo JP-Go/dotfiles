@@ -1,7 +1,7 @@
 theme =  "nord"
 
 [editor]
-idle-timeout = 10
+idle-timeout = 0
 completion-trigger-len = 1
 true-color = true
 line-number = "relative"
