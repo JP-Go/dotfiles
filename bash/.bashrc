@@ -136,8 +136,9 @@ ex ()
   fi
 }
 
-source ~/.config/bash/alias
-source ~/.config/bash/exports
+source ~/.config/bash/alias.bash
+source ~/.config/bash/exports.bash
+source ~/.config/bash/completions-himalaya.bash
 
 [ -d $HOME/.cargo/env ] && \. "$HOME/.cargo/env"
 

@@ -8,8 +8,9 @@ PWD=`pwd`
 # Config files for bash since most Linux systems use it
 mkdir -p ~/.config/bash
 ln -sf $PWD/bash/.bashrc ~/.bashrc
-ln -sf $PWD/bash/alias ~/.config/bash/alias
-ln -sf $PWD/bash/exports ~/.config/bash/exports
+ln -sf $PWD/bash/alias.bash ~/.config/bash/alias.bash
+ln -sf $PWD/bash/exports.bash ~/.config/bash/exports.bash
+ln -sf $PWD/bash/completions-himalaya.bash ~/.config/bash/completions-himalaya.bash
 
 # Basic workflow packages
 [[ -f /usr/bin/alacritty ]] && ln -s $PWD/alacritty ~/.config/
