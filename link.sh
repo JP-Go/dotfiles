@@ -33,7 +33,7 @@ if [[ -f /usr/bin/polybar ]];then
   ln -sf $PWD/polybar/launch.sh ~/.config/polybar/launch.sh
 fi
 
-if [[ -f /usr/bin/helix ]]; then
+if [[ -f /usr/bin/hx ]]; then
   if ! [[ -d ~/.config/helix/ ]];then mkdir -p ~/.config/helix; fi
   ln -sf $PWD/helix/config.toml ~/.config/helix/config.toml
   ln -sf $PWD/helix/languages.toml ~/.config/helix/languages.toml
