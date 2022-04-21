@@ -1,8 +1,14 @@
 # vim: ft=bash
 
 # Set nvim as the default terminal editor
-export EDITOR=nvim
-export VISUAL=nvim
+EDITOR=nvim
+VISUAL=nvim
+if [[ -f /usr/bin/hx ]]; then 
+  EDITOR=hx
+  VISUAL=hx
+fi
+export EDITOR;
+export VISUAL;
 
 # Configure TeX enviroment variables
 export TEXMFDIST=/usr/share/texlive/texmf-dist
