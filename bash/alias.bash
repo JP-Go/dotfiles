@@ -3,6 +3,8 @@
 alias tlmgr="${TEXMFDIST}/scripts/texlive/tlmgr.pl --usermode"
 alias chtsh="~/.dotfiles/scripts/cht.sh"
 alias get_pass="~/.dotfiles/scripts/get_pass.sh"
+alias toogle_wifi="~/.dotfiles/scripts/toggle_wifi.sh"
+
 if [[ -f /usr/bin/exa ]]; then
     alias ls="exa --icons" 
     alias la="exa -lah --icons"
