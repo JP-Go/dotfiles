@@ -143,6 +143,14 @@ XF86MonBrightnessDown
 super + ctrl + w
   feh -z --bg-fill ~/Imagens/wallpapers
 
-# reload polybar
+# Reload polybar
 super + ctrl + p
   ~/.config/polybar/launch.sh
+
+# Print screen
+Print
+	flameshot launcher
+
+# Print part of the screen
+shift + Print
+	flameshot gui
