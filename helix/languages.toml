@@ -1,6 +1,7 @@
 [[language]]
 name = "python"
-auto-format = true
+language-server = {command = "/home/jp/.volta/bin/pyright" , config=""}
+
 
 [[language]]
 name = "lua"
@@ -10,4 +11,10 @@ shebangs = ["lua"]
 roots = []
 comment-token = "--"
 language-server = {command = "/home/jp/.local/bin/lua-language-server/bin/lua-language-server"}
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "latex"
+file-types = ["tex"]
+language-server = {command = "/home/jp/.local/bin/texlab"}
 indent = { tab-width = 2, unit = "  " }
