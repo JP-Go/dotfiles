@@ -11,9 +11,10 @@ if [[ -f /usr/bin/exa ]]; then
     alias ll="exa -lh --icons"
     alias l="exa -lh --icons"
 fi
-if [[ -f /usr/bin/nvim ]]; then
-    alias vim="nvim"
-    alias v="nvim"
+if [[ -f ~/.local/nvim/bin/nvim ]]; then
+    alias nvim="~/.local/nvim/bin/nvim"
+    alias vim="~/.local/nvim/bin/nvim"
+    alias v="~/.local/nvim/bin/nvim"
 fi
 
 if [[ -f /usr/bin/gs ]]; then 
