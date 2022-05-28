@@ -381,4 +381,4 @@ nord: &nord
      magenta: '#B48EAD'
      cyan:    '#8FBCBB'
      white:   '#ECEFF4'
-colors: *nord
+colors: *onedark
