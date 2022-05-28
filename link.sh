@@ -15,7 +15,7 @@ ln -sf $PWD/bash/completions-himalaya.bash ~/.config/bash/completions-himalaya.b
 # Basic workflow packages
 [[ -f /usr/bin/alacritty ]] && ln -s $PWD/alacritty ~/.config/
 [[ -f /usr/bin/zsh ]] && ln -sf $PWD/zshrc ~/.zshrc
-[[ -f /usr/bin/kitty ]] && ln -s $PWD/kitty ~/.config/
+[[ -f /usr/bin/kitty ]] && ln -sf $PWD/kitty ~/.config/
 [[ -f /usr/bin/git ]] && ln -s  $PWD/.gitconfig ~/.gitconfig
 
 [[ -f $HOME/.cargo/bin/stylua ]] &&  ln -sf $PWD/stylua.toml ~/.config/stylua.toml
