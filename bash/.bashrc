@@ -138,7 +138,6 @@ ex ()
 
 source ~/.config/bash/alias.bash
 source ~/.config/bash/exports.bash
-source ~/.config/bash/completions-himalaya.bash
 
 [ -d $HOME/.cargo/env ] && \. "$HOME/.cargo/env"
 
