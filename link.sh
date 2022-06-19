@@ -18,7 +18,7 @@ ln -sf $PWD/bash/completions-himalaya.bash ~/.config/bash/completions-himalaya.b
 [[ -f /usr/bin/kitty ]] && ln -sf $PWD/kitty ~/.config/
 [[ -f /usr/bin/git ]] && ln -s  $PWD/.gitconfig ~/.gitconfig
 
-[[ -f $HOME/.cargo/bin/stylua ]] &&  ln -sf $PWD/stylua.toml ~/.config/stylua.toml
+[[ -f /usr/bin/stylua ]] &&  ln -sf $PWD/stylua.toml ~/.config/stylua.toml
 [[ -f /usr/bin/starship ]] || [[ -f $HOME/.cargo/bin/starship ]] && ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 if [[ -f /usr/bin/bspwm ]];then 
