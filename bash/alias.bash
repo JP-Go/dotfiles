@@ -5,6 +5,7 @@ alias chtsh="~/.dotfiles/scripts/cht.sh"
 alias get_pass="~/.dotfiles/scripts/get_pass.sh"
 alias toggle_wifi="~/.dotfiles/scripts/toggle_wifi.sh"
 
+if [[ -f /usr/bin/doas ]]; then alias sudo="doas"; fi
 if [[ -f /usr/bin/exa ]]; then
     alias ls="exa --icons" 
     alias la="exa -lah --icons"
@@ -33,3 +34,4 @@ fi
 
 if [[ -f /usr/bin/lazygit ]]; then alias lg="lazygit" ; fi
 if [[ -f /usr/bin/btop ]]; then alias htop="btop" ; fi
+if [[ -f /usr/bin/helix ]]; then alias hx="helix" ; fi
