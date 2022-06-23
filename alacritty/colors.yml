@@ -466,4 +466,4 @@ nord: &nord
      magenta: '#B48EAD'
      cyan:    '#8FBCBB'
      white:   '#ECEFF4'
-colors: *rose_pine_moon
+colors: *onedark
