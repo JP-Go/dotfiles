@@ -3,10 +3,6 @@
 # Set nvim as the default terminal editor
 EDITOR=nvim
 VISUAL=nvim
-if [[ -f /usr/bin/hx ]]; then 
-  EDITOR=hx
-  VISUAL=hx
-fi
 export EDITOR;
 export VISUAL;
 
