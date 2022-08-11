@@ -139,7 +139,7 @@ ex ()
 source ~/.config/bash/alias.bash
 source ~/.config/bash/exports.bash
 
-xset r rate 250 80
+xset r rate 200 80
 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
@@ -154,3 +154,4 @@ export PS1
 [ -d $HOME/.cargo/env ] && \. "$HOME/.cargo/env"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
