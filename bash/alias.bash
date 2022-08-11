@@ -1,16 +1,20 @@
 #vim: ft=bash
 
 alias tlmgr="${TEXMFDIST}/scripts/texlive/tlmgr.pl --usermode"
-alias chtsh="~/.dotfiles/scripts/cht.sh"
-alias get_pass="~/.dotfiles/scripts/get_pass.sh"
-alias toggle_wifi="~/.dotfiles/scripts/toggle_wifi.sh"
 
 if [[ -f /usr/bin/doas ]]; then alias sudo="doas"; fi
 if [[ -f /usr/bin/exa ]]; then
+    alias l="exa --icons" 
     alias ls="exa --icons" 
     alias la="exa -lah --icons"
     alias ll="exa -lh --icons"
-    alias l="exa -lh --icons"
+fi
+
+if [[ -f /usr/bin/lsd ]]; then
+    alias l="lsd"
+    alias ls="lsd"
+    alias ll="lsd -l" 
+    alias la="lsd -a"
 fi
 
 if [[ -f ~/.local/nvim/bin/nvim ]]; then
