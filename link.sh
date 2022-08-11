@@ -35,7 +35,6 @@ fi
 
 # Config files for bash since most Linux systems use it
 if [[ $(printenv SHELL | grep "bash") ]]; then
-	echo "using bash"
 	mkdir -p ~/.config/bash
 	ln -sf $PWD/bash/.bashrc ~/.bashrc
 	ln -sf $PWD/bash/alias.bash ~/.config/bash/alias.bash
@@ -44,7 +43,6 @@ if [[ $(printenv SHELL | grep "bash") ]]; then
 fi
 
 if [[ $(printenv SHELL | grep "zsh") ]]; then
-	echo "using zsh"
 	mkdir -p ~/.config/zsh/
 	ln -sf $PWD/zsh/zshrc ~/.zshrc
 	ln -sf $PWD/zsh/aliases.zsh		~/.config/zsh/aliases.zsh
@@ -52,4 +50,10 @@ if [[ $(printenv SHELL | grep "zsh") ]]; then
 	ln -sf $PWD/zsh/functions.zsh	~/.config/zsh/functions.zsh
 	ln -sf $PWD/zsh/prompt.zsh		~/.config/zsh/prompt.zsh
 	ln -sf $PWD/zsh/vim-mode.zsh	~/.config/zsh/vim-mode.zsh
+fi
+
+if [[ -f /usr/bin/i3 ]]; then
+	mkdir -p ~/.config/i3/
+	ln -sf $PWD/i3/config							~/.config/i3/config
+	ln -sf $PWD/i3/config.keycodes		~/.config/i3/config.keycodes
 fi
