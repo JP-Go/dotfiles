@@ -56,4 +56,5 @@ if [[ -f /usr/bin/i3 ]]; then
 	mkdir -p ~/.config/i3/
 	ln -sf $PWD/i3/config							~/.config/i3/config
 	ln -sf $PWD/i3/config.keycodes		~/.config/i3/config.keycodes
+	ln -sf $PWD/i3/i3status.conf			~/.config/i3/i3status.conf
 fi
