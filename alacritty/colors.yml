@@ -1,8 +1,7 @@
 # Colorschemes for my alacritty config
 
 schemes:
-  gruvbox_dark: &gruvbox_dark
-    # Default colors
+  gruvbox_dark: &gruvbox_dark # Default colors
     primary:
       # hard contrast: background = '0x1d2021'
       background: '0x282828'
@@ -11,72 +10,72 @@ schemes:
 
     # Normal colors
     normal:
-      black:   '0x282828'
-      red:     '0xcc241d'
-      green:   '0x98971a'
-      yellow:  '0xd79921'
-      blue:    '0x458588'
+      black: '0x282828'
+      red: '0xcc241d'
+      green: '0x98971a'
+      yellow: '0xd79921'
+      blue: '0x458588'
       magenta: '0xb16286'
-      cyan:    '0x689d6a'
-      white:   '0xa89984'
+      cyan: '0x689d6a'
+      white: '0xa89984'
 
     # Bright colors
     bright:
-      black:   '0x928374'
-      red:     '0xfb4934'
-      green:   '0xb8bb26'
-      yellow:  '0xfabd2f'
-      blue:    '0x83a598'
+      black: '0x928374'
+      red: '0xfb4934'
+      green: '0xb8bb26'
+      yellow: '0xfabd2f'
+      blue: '0x83a598'
       magenta: '0xd3869b'
-      cyan:    '0x8ec07c'
-      white:   '0xebdbb2'
+      cyan: '0x8ec07c'
+      white: '0xebdbb2'
   gruvbox_material_hard_dark: &gruvbox_material_hard_dark
-      primary:
-        background: &gbm_backgound '#1d2021'
-        foreground: &gbm_foreground '#d4be98'
+    primary:
+      background: &gbm_backgound '#1d2021'
+      foreground: &gbm_foreground '#d4be98'
 
-      normal:
-        black:   '#32302f'
-        red:     '#ea6962'
-        green:   '#a9b665'
-        yellow:  '#d8a657'
-        blue:    '#7daea3'
-        magenta: '#d3869b'
-        cyan:    '#89b482'
-        white:   '#d4be98'
-      bright:
-        black:   '#32302f'
-        red:     '#ff3030'
-        green:   '#8ef580'
-        yellow:  '#e0af69'
-        blue:    '#64aebe'
-        magenta: '#e278aa'
-        cyan:    '#8fb096'
-        white:   '#d4be98'
+    normal:
+      black: '#32302f'
+      red: '#ea6962'
+      green: '#a9b665'
+      yellow: '#d8a657'
+      blue: '#7daea3'
+      magenta: '#d3869b'
+      cyan: '#89b482'
+      white: '#d4be98'
+    bright:
+      black: '#32302f'
+      red: '#ff3030'
+      green: '#8ef580'
+      yellow: '#e0af69'
+      blue: '#64aebe'
+      magenta: '#e278aa'
+      cyan: '#8fb096'
+      white: '#d4be98'
 
   monokai_pro: &monokai_pro
     primary:
-        background: '#2D2A2E'
-        foreground: '#FCFCFA'
+      background: '#2D2A2E'
+      foreground: '#FCFCFA'
     normal:
-      black:   '#403E41'
-      red:     '#FF6188'
-      green:   '#A9DC76'
-      yellow:  '#FFD866'
-      blue:    '#FC9867'
+      black: '#403E41'
+      red: '#FF6188'
+      green: '#A9DC76'
+      yellow: '#FFD866'
+      blue: '#FC9867'
       magenta: '#AB9DF2'
-      cyan:    '#78DCE8'
-      white:   '#FCFCFA'
+      cyan: '#78DCE8'
+      white: '#FCFCFA'
     bright:
-      black:   '#727072'
-      red:     '#FF6188'
-      green:   '#A9DC76'
-      yellow:  '#FFD866'
-      blue:    '#FC9867'
+      black: '#727072'
+      red: '#FF6188'
+      green: '#A9DC76'
+      yellow: '#FFD866'
+      blue: '#FC9867'
       magenta: '#AB9DF2'
-      cyan:    '#78DCE8'
-      white:   '#FCFCFA'
-  
+      cyan: '#78DCE8'
+      white: '#FCFCFA'
+
   onedark: &onedark
     primary:
       background: '0x1e2127'
@@ -100,24 +99,103 @@ schemes:
 
     # Normal colors
     normal:
-      black:   '0x1e2127'
-      red:     '0xe06c75'
-      green:   '0x98c379'
-      yellow:  '0xd19a66'
-      blue:    '0x61afef'
+      black: '0x1e2127'
+      red: '0xe06c75'
+      green: '0x98c379'
+      yellow: '0xd19a66'
+      blue: '0x61afef'
       magenta: '0xc678dd'
-      cyan:    '0x56b6c2'
-      white:   '0x828791'
+      cyan: '0x56b6c2'
+      white: '0x828791'
 
     # Bright colors
     bright:
-      black:   '0x5c6370'
-      red:     '0xe06c75'
-      green:   '0x98c379'
-      yellow:  '0xd19a66'
-      blue:    '0x61afef'
+      black: '0x5c6370'
+      red: '0xe06c75'
+      green: '0x98c379'
+      yellow: '0xd19a66'
+      blue: '0x61afef'
       magenta: '0xc678dd'
-      cyan:    '0x56b6c2'
-      white:   '0xe6efff'
+      cyan: '0x56b6c2'
+      white: '0xe6efff'
 
-colors: *onedark
+  catppuccin: &catppuccin # Default colors
+    primary:
+      background: '#1E1E2E' # base
+      foreground: '#CDD6F4' # text
+      # Bright and dim foreground colors
+      dim_foreground: '#CDD6F4' # text
+      bright_foreground: '#CDD6F4' # text
+
+      # Cursor colors
+      cursor:
+        text: '#1E1E2E' # base
+        cursor: '#F5E0DC' # rosewater
+      vi_mode_cursor:
+        text: '#1E1E2E' # base
+        cursor: '#B4BEFE' # lavender
+
+      # Search colors
+      search:
+        matches:
+          foreground: '#1E1E2E' # base
+          background: '#A6ADC8' # subtext0
+        focused_match:
+          foreground: '#1E1E2E' # base
+          background: '#A6E3A1' # green
+        footer_bar:
+          foreground: '#1E1E2E' # base
+          background: '#A6ADC8' # subtext0
+
+      # Keyboard regex hints
+      hints:
+        start:
+          foreground: '#1E1E2E' # base
+          background: '#F9E2AF' # yellow
+        end:
+          foreground: '#1E1E2E' # base
+          background: '#A6ADC8' # subtext0
+
+      # Selection colors
+      selection:
+        text: '#1E1E2E' # base
+        background: '#F5E0DC' # rosewater
+
+      # Normal colors
+      normal:
+        black: '#45475A' # surface1
+        red: '#F38BA8' # red
+        green: '#A6E3A1' # green
+        yellow: '#F9E2AF' # yellow
+        blue: '#89B4FA' # blue
+        magenta: '#F5C2E7' # pink
+        cyan: '#94E2D5' # teal
+        white: '#BAC2DE' # subtext1
+
+      # Bright colors
+      bright:
+        black: '#585B70' # surface2
+        red: '#F38BA8' # red
+        green: '#A6E3A1' # green
+        yellow: '#F9E2AF' # yellow
+        blue: '#89B4FA' # blue
+        magenta: '#F5C2E7' # pink
+        cyan: '#94E2D5' # teal
+        white: '#A6ADC8' # subtext0
+
+      # Dim colors
+      dim:
+        black: '#45475A' # surface1
+        red: '#F38BA8' # red
+        green: '#A6E3A1' # green
+        yellow: '#F9E2AF' # yellow
+        blue: '#89B4FA' # blue
+        magenta: '#F5C2E7' # pink
+        cyan: '#94E2D5' # teal
+        white: '#BAC2DE' # subtext1
+
+      indexed_colors:
+        - { index: 16, color: '#FAB387' }
+        - { index: 17, color: '#F5E0DC' }
+
+colors: *catppuccin
