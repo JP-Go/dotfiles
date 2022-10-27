@@ -7,12 +7,12 @@ PWD=`pwd`
 
 
 # Basic workflow packages
-[[ -f /usr/bin/alacritty ]] && ln -s $PWD/alacritty ~/.config/
-[[ -f /usr/bin/kitty ]] && ln -sf $PWD/kitty ~/.config/
-[[ -f /usr/bin/git ]] && ln -s  $PWD/.gitconfig ~/.gitconfig
+ln -s $PWD/alacritty ~/.config/
+ln -sf $PWD/kitty ~/.config/
+ln -s  $PWD/.gitconfig ~/.gitconfig
 
-[[ -f /usr/bin/stylua ]] &&  ln -sf $PWD/stylua.toml ~/.config/stylua.toml
-[[ -f /usr/bin/starship ]] || [[ -f $HOME/.cargo/bin/starship ]] && ln -sf $PWD/starship.toml ~/.config/starship.toml
+ln -sf $PWD/stylua.toml ~/.config/stylua.toml
+ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 if [[ -f /usr/bin/bspwm ]];then 
   if ! [[ -d ~/.config/bspwm/ ]];then mkdir -p ~/.config/bspwm; fi
@@ -25,12 +25,6 @@ if [[ -f /usr/bin/polybar ]];then
   if ! [[ -d ~/.config/polybar/ ]];then mkdir -p ~/.config/polybar; fi
   ln -sf $PWD/polybar/config.ini ~/.config/polybar/config.ini
   ln -sf $PWD/polybar/launch.sh ~/.config/polybar/launch.sh
-fi
-
-if [[ -f /usr/bin/hx ]]; then
-  if ! [[ -d ~/.config/helix/ ]];then mkdir -p ~/.config/helix; fi
-  ln -sf $PWD/helix/config.toml ~/.config/helix/config.toml
-  ln -sf $PWD/helix/languages.toml ~/.config/helix/languages.toml
 fi
 
 # Config files for bash since most Linux systems use it
@@ -54,7 +48,7 @@ fi
 
 if [[ -f /usr/bin/i3 ]]; then
 	mkdir -p ~/.config/i3/
-	ln -sf $PWD/i3/config							~/.config/i3/config
-	ln -sf $PWD/i3/config.keycodes		~/.config/i3/config.keycodes
-	ln -sf $PWD/i3/i3status.conf			~/.config/i3/i3status.conf
+	ln -sf $PWD/i3/config			~/.config/i3/config
+	ln -sf $PWD/i3/config.keycodes  ~/.config/i3/config.keycodes
+	ln -sf $PWD/i3/i3status.conf    ~/.config/i3/i3status.conf
 fi
