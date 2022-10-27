@@ -23,15 +23,15 @@ env:
   TERM: alacritty
 
 window:
-  opacity: 0.99
+  opacity: 0.90
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  # dimensions:
-  #   columns: 92
-  #   lines: 24
+  dimensions:
+    columns: 88
+    lines: 24
 
   # Window position (changes require restart)
   #
@@ -111,7 +111,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
     # The `style` can be specified to pick a specific face.
     style: Regular
 
@@ -121,7 +121,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Bold
 
     # The `style` can be specified to pick a specific face.
@@ -135,7 +135,7 @@ font:
     # value specified for the normal font.
 
     # The `style` can be specified to pick a specific face.
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
     # style: Italic
 
   # Bold italic font face
@@ -145,14 +145,14 @@ font:
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
     #
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
     # style: Bold Italic
 
     # The `style` can be specified to pick a specific face.
     # style: Bold Italic
 
   # Point size
-  size: 16.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -736,9 +736,8 @@ key_bindings:
   - { key: Minus, mods: Control, action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Control, action: DecreaseFontSize }
   - { key: T, mods: Control|Shift, action: SpawnNewInstance }
-  - { key: N, mods: Control, chars: "goto \x0D" }
   # - { key: L,         mods: Control,                    action: ClearLogNotice }
-  #- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
+  # - { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
   # - { key: Paste,                                       action: Paste          }
   # - { key: Copy,                                        action: Copy           }
 
