@@ -226,4 +226,4 @@ schemes:
         - { index: 16, color: '#FAB387' }
         - { index: 17, color: '#F5E0DC' }
 
-colors: *carbonfox
+colors: *monokai_pro
