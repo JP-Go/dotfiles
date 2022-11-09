@@ -52,3 +52,11 @@ if [[ -f /usr/bin/i3 ]]; then
 	ln -sf $PWD/i3/config.keycodes  ~/.config/i3/config.keycodes
 	ln -sf $PWD/i3/i3status.conf    ~/.config/i3/i3status.conf
 fi
+
+! [[ -d ~/.local/share/fonts/ ]] && mkdir ~/.local/share/fonts
+
+! [[ -d ~/.local/share/fonts/SourceCodePro/ ]] && \
+	[[ -f /usr/bin/wget ]] && \
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/SourceCodePro.zip && \
+	unzip -d ~/.local/share/fonts/SourceCodePro SourceCodePro.zip && \
+	rm SourceCodePro.zip
