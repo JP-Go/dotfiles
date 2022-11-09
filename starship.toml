@@ -10,7 +10,7 @@ $git_status\
 $git_metrics\
 $fill\
 $nodejs\
-$cmd_duration $jobs $time\
+$cmd_duration $jobs\
 $line_break\
 $character"""
 
