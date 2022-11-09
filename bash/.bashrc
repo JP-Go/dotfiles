@@ -139,16 +139,10 @@ ex ()
 source ~/.config/bash/alias.bash
 source ~/.config/bash/exports.bash
 
-xset r rate 200 80
-
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 
 }
-
-
-PS1="\[\e[01;32m\][\u\[\e[01;31m\]@\[\e[01;32m\]\h] ➜\[\e[01;36m\] \W \[\e[01;35m\]\$(parse_git_branch)\[\e[00m\]"
-export PS1
 
 
 [ -d $HOME/.cargo/env ] && \. "$HOME/.cargo/env"
