@@ -10,9 +10,9 @@ PWD=`pwd`
 ln -s $PWD/alacritty ~/.config/
 ln -sf $PWD/kitty ~/.config/
 ln -s  $PWD/.gitconfig ~/.gitconfig
+ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 ln -sf $PWD/stylua.toml ~/.config/stylua.toml
-ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 if [[ -f /usr/bin/bspwm ]];then 
   if ! [[ -d ~/.config/bspwm/ ]];then mkdir -p ~/.config/bspwm; fi
