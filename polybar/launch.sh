@@ -1,6 +1,4 @@
 #!/bin/bash
-killall -q polybar
+polybar-msg cmd quit
 
-while pgrep -x polybar >/dev/null;do sleep 1;done
-
-polybar mybar &
+polybar bar 2>&1 | tee -a /tmp/polybar.log & disown
