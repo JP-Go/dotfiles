@@ -211,7 +211,6 @@ bar {
 #######################################################################
 exec i3-config-wizard
 
-
 # My custom bindings
 
 bindsym Mod4+e exec --no-startup-id "rofimoji -r 'Char' -f emojis nerd_font mathematical_operators greek_and_coptic -a clipboard"
