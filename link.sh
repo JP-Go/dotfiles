@@ -7,9 +7,9 @@ PWD=`pwd`
 
 
 # Basic workflow packages
-ln -s $PWD/alacritty ~/.config/
+ln -sf $PWD/alacritty ~/.config/
 ln -sf $PWD/kitty ~/.config/
-ln -s  $PWD/.gitconfig ~/.gitconfig
+ln -sf  $PWD/.gitconfig ~/.gitconfig
 ln -sf $PWD/starship.toml ~/.config/starship.toml
 
 ln -sf $PWD/stylua.toml ~/.config/stylua.toml
@@ -22,9 +22,7 @@ if [[ -f /usr/bin/bspwm ]];then
 fi
 
 if [[ -f /usr/bin/polybar ]];then 
-  if ! [[ -d ~/.config/polybar/ ]];then mkdir -p ~/.config/polybar; fi
-  ln -sf $PWD/polybar/config.ini ~/.config/polybar/config.ini
-  ln -sf $PWD/polybar/launch.sh ~/.config/polybar/launch.sh
+	ln -sf $PWD/polybar ~/.config/
 fi
 
 # Config files for bash since most Linux systems use it
