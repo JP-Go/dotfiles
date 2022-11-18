@@ -7,8 +7,8 @@ export EDITOR;
 export VISUAL;
 
 # Configure TeX enviroment variables
-export TEXMFDIST=/usr/share/texmf-dist
-export TEXMFLOCAL=/usr/share/texmf-local:/usr/share/texmf
+export TEXMFDIST=/usr/share/texlive/texmf-dist
+export TEXMFLOCAL=/usr/share/texlive/texmf-local:/usr/share/texmf
 export TEXMFSYSVAR=/var/lib/texmf
 export TEXMFSYSCONFIG=/etc/texlive/
 export TEXMFHOME=~/texmf
