@@ -29,7 +29,7 @@ disabled = false
 symbol = "✖ "
 
 [directory]
-truncation_symbol = "…/"
+truncation_symbol = ".../"
 
 [time]
 disabled = false
