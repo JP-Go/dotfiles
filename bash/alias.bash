@@ -6,8 +6,8 @@ if [[ -f /usr/bin/doas ]]; then alias sudo="doas"; fi
 if [[ -f /usr/bin/exa ]]; then
     alias l="exa --icons" 
     alias ls="exa --icons" 
-    alias la="exa -lah --icons"
-    alias ll="exa -lh --icons"
+    alias la="exa -lhaG --icons"
+    alias ll="exa -lhG --icons"
 fi
 
 if [[ -f /usr/bin/lsd ]]; then
