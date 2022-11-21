@@ -1,113 +1,112 @@
 # Colorschemes for my alacritty config
 
 schemes:
-  carbonfox: &carbonfox
-    # Default colors
+  carbonfox: &carbonfox # Default colors
     primary:
-      background: '0x161616'
-      foreground: '0xf2f4f8'
+      background: "0x161616"
+      foreground: "0xf2f4f8"
     # Normal colors
     normal:
-      black:   '0x282828'
-      red:     '0xee5396'
-      green:   '0x25be6a'
-      yellow:  '0x08bdba'
-      blue:    '0x78a9ff'
-      magenta: '0xbe95ff'
-      cyan:    '0x33b1ff'
-      white:   '0xdfdfe0'
+      black: "0x282828"
+      red: "0xee5396"
+      green: "0x25be6a"
+      yellow: "0x08bdba"
+      blue: "0x78a9ff"
+      magenta: "0xbe95ff"
+      cyan: "0x33b1ff"
+      white: "0xdfdfe0"
     # Bright colors
     bright:
-      black:   '0x484848'
-      red:     '0xf16da6'
-      green:   '0x46c880'
-      yellow:  '0x2dc7c4'
-      blue:    '0x8cb6ff'
-      magenta: '0xc8a5ff'
-      cyan:    '0x52bdff'
-      white:   '0xe4e4e5'
+      black: "0x484848"
+      red: "0xf16da6"
+      green: "0x46c880"
+      yellow: "0x2dc7c4"
+      blue: "0x8cb6ff"
+      magenta: "0xc8a5ff"
+      cyan: "0x52bdff"
+      white: "0xe4e4e5"
     indexed_colors:
-      - { index: 16, color: '0x3ddbd9' }
-      - { index: 17, color: '0xff7eb6' }
+      - { index: 16, color: "0x3ddbd9" }
+      - { index: 17, color: "0xff7eb6" }
   gruvbox_dark: &gruvbox_dark # Default colors
     primary:
       # hard contrast: background = '0x1d2021'
-      background: '0x282828'
+      background: "0x282828"
       # soft contrast: background = '0x32302f'
-      foreground: '0xebdbb2'
+      foreground: "0xebdbb2"
 
     # Normal colors
     normal:
-      black: '0x282828'
-      red: '0xcc241d'
-      green: '0x98971a'
-      yellow: '0xd79921'
-      blue: '0x458588'
-      magenta: '0xb16286'
-      cyan: '0x689d6a'
-      white: '0xa89984'
+      black: "0x282828"
+      red: "0xcc241d"
+      green: "0x98971a"
+      yellow: "0xd79921"
+      blue: "0x458588"
+      magenta: "0xb16286"
+      cyan: "0x689d6a"
+      white: "0xa89984"
 
     # Bright colors
     bright:
-      black: '0x928374'
-      red: '0xfb4934'
-      green: '0xb8bb26'
-      yellow: '0xfabd2f'
-      blue: '0x83a598'
-      magenta: '0xd3869b'
-      cyan: '0x8ec07c'
-      white: '0xebdbb2'
+      black: "0x928374"
+      red: "0xfb4934"
+      green: "0xb8bb26"
+      yellow: "0xfabd2f"
+      blue: "0x83a598"
+      magenta: "0xd3869b"
+      cyan: "0x8ec07c"
+      white: "0xebdbb2"
   gruvbox_material_hard_dark: &gruvbox_material_hard_dark
     primary:
-      background: &gbm_backgound '#1d2021'
-      foreground: &gbm_foreground '#d4be98'
+      background: &gbm_backgound "#1d2021"
+      foreground: &gbm_foreground "#d4be98"
 
     normal:
-      black: '#32302f'
-      red: '#ea6962'
-      green: '#a9b665'
-      yellow: '#d8a657'
-      blue: '#7daea3'
-      magenta: '#d3869b'
-      cyan: '#89b482'
-      white: '#d4be98'
+      black: "#32302f"
+      red: "#ea6962"
+      green: "#a9b665"
+      yellow: "#d8a657"
+      blue: "#7daea3"
+      magenta: "#d3869b"
+      cyan: "#89b482"
+      white: "#d4be98"
     bright:
-      black: '#32302f'
-      red: '#ff3030'
-      green: '#8ef580'
-      yellow: '#e0af69'
-      blue: '#64aebe'
-      magenta: '#e278aa'
-      cyan: '#8fb096'
-      white: '#d4be98'
+      black: "#32302f"
+      red: "#ff3030"
+      green: "#8ef580"
+      yellow: "#e0af69"
+      blue: "#64aebe"
+      magenta: "#e278aa"
+      cyan: "#8fb096"
+      white: "#d4be98"
 
   monokai_pro: &monokai_pro
     primary:
-      background: '#2D2A2E'
-      foreground: '#FCFCFA'
+      background: "#2D2A2E"
+      foreground: "#FCFCFA"
     normal:
-      black: '#403E41'
-      red: '#FF6188'
-      green: '#A9DC76'
-      yellow: '#FFD866'
-      blue: '#FC9867'
-      magenta: '#AB9DF2'
-      cyan: '#78DCE8'
-      white: '#FCFCFA'
+      black: "#403E41"
+      red: "#FF6188"
+      green: "#A9DC76"
+      yellow: "#FFD866"
+      blue: "#FC9867"
+      magenta: "#AB9DF2"
+      cyan: "#78DCE8"
+      white: "#FCFCFA"
     bright:
-      black: '#727072'
-      red: '#FF6188'
-      green: '#A9DC76'
-      yellow: '#FFD866'
-      blue: '#FC9867'
-      magenta: '#AB9DF2'
-      cyan: '#78DCE8'
-      white: '#FCFCFA'
+      black: "#727072"
+      red: "#FF6188"
+      green: "#A9DC76"
+      yellow: "#FFD866"
+      blue: "#FC9867"
+      magenta: "#AB9DF2"
+      cyan: "#78DCE8"
+      white: "#FCFCFA"
 
   onedark: &onedark
     primary:
-      background: '0x1e2127'
-      foreground: '0xabb2bf'
+      background: "0x1e2127"
+      foreground: "0xabb2bf"
 
       # Bright and dim foreground colors
       #
@@ -115,7 +114,7 @@ schemes:
       # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
       # is `false`, the normal foreground color will be used.
       #dim_foreground: '0x9a9a9a'
-      bright_foreground: '0xe6efff'
+      bright_foreground: "0xe6efff"
 
     # Cursor colors
     #
@@ -127,135 +126,135 @@ schemes:
 
     # Normal colors
     normal:
-      black: '0x1e2127'
-      red: '0xe06c75'
-      green: '0x98c379'
-      yellow: '0xd19a66'
-      blue: '0x61afef'
-      magenta: '0xc678dd'
-      cyan: '0x56b6c2'
-      white: '0x828791'
+      black: "0x1e2127"
+      red: "0xe06c75"
+      green: "0x98c379"
+      yellow: "0xd19a66"
+      blue: "0x61afef"
+      magenta: "0xc678dd"
+      cyan: "0x56b6c2"
+      white: "0x828791"
 
     # Bright colors
     bright:
-      black: '0x5c6370'
-      red: '0xe06c75'
-      green: '0x98c379'
-      yellow: '0xd19a66'
-      blue: '0x61afef'
-      magenta: '0xc678dd'
-      cyan: '0x56b6c2'
-      white: '0xe6efff'
+      black: "0x5c6370"
+      red: "0xe06c75"
+      green: "0x98c379"
+      yellow: "0xd19a66"
+      blue: "0x61afef"
+      magenta: "0xc678dd"
+      cyan: "0x56b6c2"
+      white: "0xe6efff"
 
   catppuccin: &catppuccin # Default colors
     primary:
-      background: '#1E1E2E' # base
-      foreground: '#CDD6F4' # text
+      background: "#1E1E2E" # base
+      foreground: "#CDD6F4" # text
       # Bright and dim foreground colors
-      dim_foreground: '#CDD6F4' # text
-      bright_foreground: '#CDD6F4' # text
+      dim_foreground: "#CDD6F4" # text
+      bright_foreground: "#CDD6F4" # text
 
       # Cursor colors
       cursor:
-        text: '#1E1E2E' # base
-        cursor: '#F5E0DC' # rosewater
+        text: "#1E1E2E" # base
+        cursor: "#F5E0DC" # rosewater
       vi_mode_cursor:
-        text: '#1E1E2E' # base
-        cursor: '#B4BEFE' # lavender
+        text: "#1E1E2E" # base
+        cursor: "#B4BEFE" # lavender
 
       # Search colors
       search:
         matches:
-          foreground: '#1E1E2E' # base
-          background: '#A6ADC8' # subtext0
+          foreground: "#1E1E2E" # base
+          background: "#A6ADC8" # subtext0
         focused_match:
-          foreground: '#1E1E2E' # base
-          background: '#A6E3A1' # green
+          foreground: "#1E1E2E" # base
+          background: "#A6E3A1" # green
         footer_bar:
-          foreground: '#1E1E2E' # base
-          background: '#A6ADC8' # subtext0
+          foreground: "#1E1E2E" # base
+          background: "#A6ADC8" # subtext0
 
       # Keyboard regex hints
       hints:
         start:
-          foreground: '#1E1E2E' # base
-          background: '#F9E2AF' # yellow
+          foreground: "#1E1E2E" # base
+          background: "#F9E2AF" # yellow
         end:
-          foreground: '#1E1E2E' # base
-          background: '#A6ADC8' # subtext0
+          foreground: "#1E1E2E" # base
+          background: "#A6ADC8" # subtext0
 
       # Selection colors
       selection:
-        text: '#1E1E2E' # base
-        background: '#F5E0DC' # rosewater
+        text: "#1E1E2E" # base
+        background: "#F5E0DC" # rosewater
 
       # Normal colors
       normal:
-        black: '#45475A' # surface1
-        red: '#F38BA8' # red
-        green: '#A6E3A1' # green
-        yellow: '#F9E2AF' # yellow
-        blue: '#89B4FA' # blue
-        magenta: '#F5C2E7' # pink
-        cyan: '#94E2D5' # teal
-        white: '#BAC2DE' # subtext1
+        black: "#45475A" # surface1
+        red: "#F38BA8" # red
+        green: "#A6E3A1" # green
+        yellow: "#F9E2AF" # yellow
+        blue: "#89B4FA" # blue
+        magenta: "#F5C2E7" # pink
+        cyan: "#94E2D5" # teal
+        white: "#BAC2DE" # subtext1
 
       # Bright colors
       bright:
-        black: '#585B70' # surface2
-        red: '#F38BA8' # red
-        green: '#A6E3A1' # green
-        yellow: '#F9E2AF' # yellow
-        blue: '#89B4FA' # blue
-        magenta: '#F5C2E7' # pink
-        cyan: '#94E2D5' # teal
-        white: '#A6ADC8' # subtext0
+        black: "#585B70" # surface2
+        red: "#F38BA8" # red
+        green: "#A6E3A1" # green
+        yellow: "#F9E2AF" # yellow
+        blue: "#89B4FA" # blue
+        magenta: "#F5C2E7" # pink
+        cyan: "#94E2D5" # teal
+        white: "#A6ADC8" # subtext0
 
       # Dim colors
       dim:
-        black: '#45475A' # surface1
-        red: '#F38BA8' # red
-        green: '#A6E3A1' # green
-        yellow: '#F9E2AF' # yellow
-        blue: '#89B4FA' # blue
-        magenta: '#F5C2E7' # pink
-        cyan: '#94E2D5' # teal
-        white: '#BAC2DE' # subtext1
+        black: "#45475A" # surface1
+        red: "#F38BA8" # red
+        green: "#A6E3A1" # green
+        yellow: "#F9E2AF" # yellow
+        blue: "#89B4FA" # blue
+        magenta: "#F5C2E7" # pink
+        cyan: "#94E2D5" # teal
+        white: "#BAC2DE" # subtext1
 
       indexed_colors:
-        - { index: 16, color: '#FAB387' }
-        - { index: 17, color: '#F5E0DC' }
-  
+        - { index: 16, color: "#FAB387" }
+        - { index: 17, color: "#F5E0DC" }
+
   kanagawa: &kanagawa
     primary:
-        background: '0x1f1f28'
-        foreground: '0xdcd7ba'
+      background: "0x1f1f28"
+      foreground: "0xdcd7ba"
 
     normal:
-      black:   '0x090618'
-      red:     '0xc34043'
-      green:   '0x76946a'
-      yellow:  '0xc0a36e'
-      blue:    '0x7e9cd8'
-      magenta: '0x957fb8'
-      cyan:    '0x6a9589'
-      white:   '0xc8c093'
+      black: "0x090618"
+      red: "0xc34043"
+      green: "0x76946a"
+      yellow: "0xc0a36e"
+      blue: "0x7e9cd8"
+      magenta: "0x957fb8"
+      cyan: "0x6a9589"
+      white: "0xc8c093"
 
     bright:
-      black:   '0x727169'
-      red:     '0xe82424'
-      green:   '0x98bb6c'
-      yellow:  '0xe6c384'
-      blue:    '0x7fb4ca'
-      magenta: '0x938aa9'
-      cyan:    '0x7aa89f'
-      white:   '0xdcd7ba'
+      black: "0x727169"
+      red: "0xe82424"
+      green: "0x98bb6c"
+      yellow: "0xe6c384"
+      blue: "0x7fb4ca"
+      magenta: "0x938aa9"
+      cyan: "0x7aa89f"
+      white: "0xdcd7ba"
 
     selection:
-      background: '0x2d4f67'
-      foreground: '0xc8c093'
+      background: "0x2d4f67"
+      foreground: "0xc8c093"
 
     indexed_colors:
-      - { index: 16, color: '0xffa066' }
-      - { index: 17, color: '0xff5d62' }
+      - { index: 16, color: "0xffa066" }
+      - { index: 17, color: "0xff5d62" }
 colors: *kanagawa
