@@ -156,3 +156,6 @@ Print
 # Print part of the screen
 shift + Print
 	flameshot gui
+
+super + e
+    rofimoji
