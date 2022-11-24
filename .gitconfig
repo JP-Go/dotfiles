@@ -3,3 +3,5 @@
 	name = João Pedro
 [init]
 	defaultbranch = main
+[credential]
+	helper = cache
