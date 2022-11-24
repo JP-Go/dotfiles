@@ -257,4 +257,5 @@ schemes:
     indexed_colors:
       - { index: 16, color: "0xffa066" }
       - { index: 17, color: "0xff5d62" }
-colors: *kanagawa
+
+colors: *monokai_pro
