@@ -33,7 +33,3 @@ PERL_MM_OPT="INSTALL_BASE=/home/jp/perl5"; export PERL_MM_OPT;
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 export PATH=$PATH:/home/.local/bin
-
-JAVA_HOME=/usr/lib/jvm/default
-export JAVA_HOME
-export PATH=$PATH:$JAVA_HOME
