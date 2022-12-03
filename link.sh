@@ -10,6 +10,7 @@ ln -sf $PWD/alacritty ~/.config/
 ln -sf $PWD/kitty ~/.config/
 ln -sf  $PWD/.gitconfig ~/.gitconfig
 ln -sf $PWD/starship.toml ~/.config/starship.toml
+ln -sf $PWD/wallpapers ~/Imagens/
 
 ln -sf $PWD/stylua.toml ~/.config/stylua.toml
 
