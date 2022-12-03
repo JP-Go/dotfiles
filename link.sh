@@ -5,7 +5,6 @@ set -x
 
 PWD=`pwd`
 
-
 # Basic workflow packages
 ln -sf $PWD/alacritty ~/.config/
 ln -sf $PWD/kitty ~/.config/
@@ -51,10 +50,4 @@ if [[ -f /usr/bin/i3 ]]; then
 	ln -sf $PWD/i3/i3status.conf    ~/.config/i3/i3status.conf
 fi
 
-! [[ -d ~/.local/share/fonts/ ]] && mkdir ~/.local/share/fonts
-
-! [[ -d ~/.local/share/fonts/SourceCodePro/ ]] && \
-	[[ -f /usr/bin/wget ]] && \
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/SourceCodePro.zip && \
-	unzip -d ~/.local/share/fonts/SourceCodePro SourceCodePro.zip && \
-	rm SourceCodePro.zip
+ln -sf $PWD/rofi ~/.config/
