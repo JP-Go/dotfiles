@@ -141,15 +141,14 @@ source ~/.config/bash/exports.bash
 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
-
 }
 
+eval "$(starship init bash)"
 
 [ -d $HOME/.cargo/env ] && \. "$HOME/.cargo/env"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-eval "$(starship init bash)"
 
 [ -f "/home/jp/.ghcup/env" ] && source "/home/jp/.ghcup/env" # ghcup-env
 
