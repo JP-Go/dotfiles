@@ -20,10 +20,7 @@ PATH=$PATH:/home/jp/.cargo/bin:/home/jp/.local/share/gem/ruby/3.0.0/bin
 PATH="/home/jp/perl5/bin${PATH:+:${PATH}}"; 
 if [[ -f $HOME/.cargo/env ]]; then . "$HOME/.cargo/env";fi
 # Add yarn or npm downloaded binaries to path
-if [[ -d $HOME/.yarn/bin ]]; then PATH=$PATH:$HOME/.yarn/bin;fi
-if [[ -d $HOME/.npm/bin ]]; then PATH=$PATH:$HOME/.npm/bin;fi
-if [[ -d $HOME/.local/bin ]]; then PATH=$PATH:$HOME/.local/bin;fi
-export PATH
+if [[ -d $HOME/.local/bin ]]; then PATH="$PATH:$HOME/.local/bin";fi
 # Add some perl env variables
 PERL5LIB="/home/jp/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/jp/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
@@ -32,4 +29,4 @@ PERL_MM_OPT="INSTALL_BASE=/home/jp/perl5"; export PERL_MM_OPT;
 
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
-export PATH=$PATH:/home/.local/bin
+export PATH=${PATH}:${HOME}/.local/bin
