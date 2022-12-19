@@ -1,20 +1,19 @@
 [[language]]
 name = "python"
-language-server = {command = "/home/jp/.volta/bin/pyright" , config=""}
-
-
-[[language]]
-name = "lua"
-scope = "source.lua"
-file-types = ["lua"]
-shebangs = ["lua"]
-roots = []
-comment-token = "--"
-language-server = {command = "/home/jp/.local/bin/lua-language-server/bin/lua-language-server"}
-indent = { tab-width = 2, unit = "  " }
+language-server = {command = "/home/jp/.local/share/nvim/mason/bin/pyright" }
 
 [[language]]
 name = "latex"
 file-types = ["tex"]
-language-server = {command = "/home/jp/.local/bin/texlab"}
+language-server = {command = "/home/jp/.local/share/nvim/mason/bin/texlab"}
 indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-server = {command = "/home/jp/.local/share/nvim/mason/bin/typescript-language-server" , args = ["--stdio"]}
+
+[[language]]
+name = "haskell"
+indent = {tab-width = 2,unit = "  "}
+language-server = {command = "haskell-language-server-wrapper-1.8.0.0"}
