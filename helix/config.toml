@@ -1,12 +1,12 @@
-theme =  "rose_pine"
+theme =  "tokyonight"
 
 [editor]
 idle-timeout = 20
-completion-trigger-len = 1
+completion-trigger-len = 0
 line-number = "relative"
 bufferline = "always"
 cursorline = true
-color-modes = true
+rulers = [80]
 
 [editor.cursor-shape]
 select = "block"
@@ -21,15 +21,11 @@ hidden = false
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "|"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+right = ["diagnostics", "position", "file-encoding", "file-line-ending", "file-type"]
 
 [editor.indent-guides]
 render = true
-character = "┊" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 
 [keys.normal]
 "0" = ["goto_line_start"]
