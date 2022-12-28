@@ -52,3 +52,4 @@ if [[ -f /usr/bin/i3 ]]; then
 fi
 
 ln -sf $PWD/rofi ~/.config/
+ln -sf $PWD/helix ~/.config/
