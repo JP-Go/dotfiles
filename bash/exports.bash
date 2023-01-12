@@ -30,3 +30,4 @@ PERL_MM_OPT="INSTALL_BASE=/home/jp/perl5"; export PERL_MM_OPT;
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 export PATH=${PATH}:${HOME}/.local/bin
+export NNN_TMPFILE=${HOME}/.config/nnn/.lastd
