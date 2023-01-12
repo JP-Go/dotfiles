@@ -333,4 +333,4 @@ schemes:
       end:
         foreground: "#6e6a86"
         background: "#1f1d2e"
-colors: *monokai_pro
+colors: *carbonfox
