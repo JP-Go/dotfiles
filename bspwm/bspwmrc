@@ -2,7 +2,7 @@
 color1="#f7768e"
 
 # Launch services first
-# pgrep -x picom > /dev/null || picom &
+pgrep -x picom > /dev/null || picom -bc
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x dunst > /dev/null || dunst &
 
