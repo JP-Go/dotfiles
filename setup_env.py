@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from shutil import which
+from shutil import move, which
 import shlex
 from termcolor import cprint
 from subprocess import Popen, PIPE
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     pm = input("Which package manager i'm using (executable name)? ")
     cprint('Refreshing package manager repos', color='green')
     refresh_stats = Popen(shlex.split(f"sudo {pm} {KNOWN_PMS_CMDS[pm]['r']}")).wait()
-    if not refresh_stats == 100:
+    if not refresh_stats == 0:
         log_error("Could not refresh package manager repo. Stopping")
         exit(1)
 
@@ -42,6 +42,7 @@ if __name__ == "__main__":
     get_alacritty = Popen(shlex.split(interpolate_pm(pm,'alacritty'))).wait()
     if get_alacritty != 0:
         log_error('Could not install alacritty')
+
     cprint('Getting nvim setup', color='green')
     get_nvim = Popen(['git','clone','https://www.github.com/JP-Go/nvim',Path('~/.config/nvim').expanduser().absolute()]).wait()
     install_nvim = Popen(shlex.split(interpolate_pm(pm,'neovim'))).wait()
@@ -50,18 +51,35 @@ if __name__ == "__main__":
 
     cprint('Getting volta.sh setup', color='green')
     volta_script = Popen(['curl','https://get.volta.sh'],stdout=PIPE)
-    get_volta = Popen(['bash','-s','--' ,'--skip-setup'],stdin=volta_script.stdout)
+    get_volta = Popen(['bash','-s','--'],stdin=volta_script.stdout)
     volta_script.wait()
     volta_status = get_volta.wait()
-    if volta_status != 0:
-        log_error("Could not get volta")
-    else:
-        Popen(['volta','install','node','pnpm']).wait()
     cprint(f'Downloading rofi with {pm} package manager', color='green')
     get_rofi = Popen(shlex.split(interpolate_pm(pm,'rofi'))).wait()
     if get_rofi != 0:
         log_error('Could not get rofi')
+
     extra_packages = input('What other packages I want to install (space separated)')
     get_extra_packages = Popen(interpolate_pm(pm,extra_packages)).wait()
     if get_extra_packages != 0:
         log_error('Could not get extra packages')
+
+    cprint('Downloading node and pnpm')
+    if volta_status != 0:
+        log_error("Could not get volta")
+    else:
+        Popen(['volta','install','node','pnpm']).wait()
+
+    cprint('Downloading nerd font',color='green')
+    fonts_path = Path('~/.local/share/fonts/').expanduser().absolute()
+    fonts_path.mkdir(exist_ok=True)
+    nerd_font = Popen(shlex.split('wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip')).wait()
+    if nerd_font != 0:
+        log_error("Could not download font")
+    else:
+        Path('JetBrainsMono').mkdir()
+        Popen(shlex.split('unzip -d JetBrainsMono JetBrainsMono.zip')).wait()
+        move('JetBrainsMono', fonts_path)
+
+    cprint('Linking paths',color='green')
+    link_packages = Popen(['bash','./link.sh']).wait()
