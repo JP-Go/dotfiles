@@ -206,8 +206,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl set 10%+"
 bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl set 10%-"
 
 # Gaps
-
-gaps inner 5
+gaps inner 8
 
 default_border pixel 2
 # Borders
