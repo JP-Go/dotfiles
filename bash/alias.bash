@@ -44,3 +44,5 @@ fi
 
 if [[ -f /usr/bin/lazygit ]]; then alias lg="lazygit" ; fi
 if [[ -f /usr/bin/btop ]]; then alias htop="btop" ; fi
+
+alias pn="pnpm"
