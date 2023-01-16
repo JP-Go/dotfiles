@@ -59,11 +59,6 @@ if __name__ == "__main__":
     if get_rofi != 0:
         log_error('Could not get rofi')
 
-    extra_packages = input('What other packages I want to install (space separated)')
-    get_extra_packages = Popen(interpolate_pm(pm,extra_packages)).wait()
-    if get_extra_packages != 0:
-        log_error('Could not get extra packages')
-
     cprint('Downloading node and pnpm')
     if volta_status != 0:
         log_error("Could not get volta")
@@ -83,3 +78,9 @@ if __name__ == "__main__":
 
     cprint('Linking paths',color='green')
     link_packages = Popen(['bash','./link.sh']).wait()
+
+    extra_packages = input('What other packages I want to install (space separated)')
+    get_extra_packages = Popen(interpolate_pm(pm,extra_packages)).wait()
+    if get_extra_packages != 0:
+        log_error('Could not get extra packages')
+
