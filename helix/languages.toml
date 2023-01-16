@@ -38,3 +38,7 @@ indent = { tab-width = 2, unit = "  " }
 name = "haskell"
 indent = {tab-width = 2,unit = "  "}
 language-server = {command = "haskell-language-server-wrapper-1.8.0.0"}
+
+[[language]]
+name = "vue"
+language-server = {command = "vue-language-server"}
