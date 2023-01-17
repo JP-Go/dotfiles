@@ -152,11 +152,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 [ -f "/home/jp/.ghcup/env" ] && source "/home/jp/.ghcup/env" # ghcup-env
 
-
-# pnpm
-export PNPM_HOME="/home/jp/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
 n ()
 {
     # Block nesting of nnn in subshells
