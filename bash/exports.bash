@@ -29,12 +29,14 @@ PERL_MM_OPT="INSTALL_BASE=/home/jp/perl5"; export PERL_MM_OPT;
 
 # Add C libs in usr/local/lib
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
-export PATH=${PATH}:${HOME}/.local/bin
 export NNN_TMPFILE=${HOME}/.config/nnn/.lastd
 
+PATH=${PATH}:${HOME}/.local/bin
 export ANDROID_HOME=~/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/../android-studio/bin
+PATH=$PATH:$ANDROID_HOME/emulator
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/tools/bin
+PATH=$PATH:$ANDROID_HOME/platform-tools
+PATH=$PATH:$ANDROID_HOME/../android-studio/bin
+
+PATH=$PATH:${HOME}/.local/share/nvim/mason/bin/; export PATH
