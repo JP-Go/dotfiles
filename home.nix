@@ -36,7 +36,12 @@ in
   programs.home-manager.enable = true;
 
   # Add starship
-  programs.starship.enable = true;
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = false;
+    };
+  };
   
   home.packages = packages;
   home.file = {
