@@ -462,5 +462,22 @@ in
           background: "#1f1d2e"
   colors: *${term_theme}
   '';
-    };
+  ".config/bash/alias.bash".text = ''
+    #vim: ft=bash
+    #
+    alias vim="nvim"
+    alias v="nvim"
+
+    alias ga="git add"
+    alias gc="git commit"
+    alias gd="git diff"
+    alias gs="git status"
+    alias gp="git push"
+
+    lg="lazygit"
+
+    alias pn="pnpm"
+    alias px="pnpx"
+  ''
+  };
 }
