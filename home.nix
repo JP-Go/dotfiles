@@ -2,6 +2,7 @@
 let 
   term_font = "Fira Code Nerd Font";
   term_font_size = "12";
+  term_theme = "kanagawa"
 in 
 {
   # Home Manager needs a bit of information about you and the
@@ -283,23 +284,6 @@ in
       primary:
         background: "0x1e2127"
         foreground: "0xabb2bf"
-
-        # Bright and dim foreground colors
-        #
-        # The dimmed foreground color is calculated automatically if it is not present.
-        # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-        # is `false`, the normal foreground color will be used.
-        #dim_foreground: '0x9a9a9a'
-        bright_foreground: "0xe6efff"
-
-      # Cursor colors
-      #
-      # Colors which should be used to draw the terminal cursor. If these are unset,
-      # the cursor color will be the inverse of the cell color.
-      #cursor:
-      #  text: '0x000000'
-      #  cursor: '0xffffff'
-
       # Normal colors
       normal:
         black: "0x1e2127"
@@ -476,7 +460,7 @@ in
         end:
           foreground: "#6e6a86"
           background: "#1f1d2e"
-  colors: *monokai_pro
+  colors: *${term_theme}
   '';
     };
 }
