@@ -3,6 +3,18 @@ let
   term_font = "Fira Code Nerd Font";
   term_font_size = "12";
   term_theme = "kanagawa";
+  packages = with pkgs; [
+    htop
+    neovim
+    alacritty
+    docker
+    docker-compose
+    chromium
+    gcc_multi
+    ripgrep
+    nodejs
+    exa
+  ];
 in 
 {
   # Home Manager needs a bit of information about you and the
@@ -26,18 +38,7 @@ in
   # Add starship
   programs.starship.enable = true;
   
-  home.packages = with pkgs; [
-    htop
-    neovim
-    alacritty
-    docker
-    docker-compose
-    chromium
-    gcc_multi
-    ripgrep
-    nodejs
-  ];
-
+  home.packages = packages;
   home.file = {
   ".config/alacritty/alacritty.yml".text = ''
     import:
@@ -481,6 +482,10 @@ in
 
     alias pn="pnpm"
     alias px="pnpx"
+
+    alias ls="exa -h"
+    alias ll="exa -lGh"
+    alias la="exa -laGh"
   '';
   ".config/bash/exports.bash".text = ''
     # vim: ft=bash
