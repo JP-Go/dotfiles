@@ -34,7 +34,7 @@ in
     ripgrep
     nodejs
   ];
-  
+
   home.file = {
   ".config/alacritty/alacritty.yml".text = ''
     import:
@@ -478,6 +478,27 @@ in
 
     alias pn="pnpm"
     alias px="pnpx"
-  ''
+  '';
+  ".config/bash/exports.bash".text = ''
+    # vim: ft=bash
+    # Set nvim as the default terminal editor
+    EDITOR=nvim
+    VISUAL=nvim
+    export EDITOR;
+    export VISUAL;
+
+    # Configure TeX enviroment variables
+    export TEXMFDIST=/usr/share/texlive/texmf-dist
+    export TEXMFLOCAL=/usr/share/texlive/texmf-local:/usr/share/texmf
+    export TEXMFSYSVAR=/var/lib/texmf
+    export TEXMFSYSCONFIG=/etc/texlive/
+    export TEXMFHOME=~/texmf
+    export TEXMFVAR=~/.texlive/texmf-var
+    export TEXMFCONFIG=~/.texlive/texmf-config
+  '';
+  ".bashrc".text = ''
+    source ~/.config/bash/alias.bash
+    source ~/.config/bash/exports.bash
+  '';
   };
 }
