@@ -22,6 +22,9 @@ in
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Add starship
+  programs.starship.enable = true;
   
   home.packages = with pkgs; [
     htop
@@ -499,6 +502,8 @@ in
   ".bashrc".text = ''
     source ~/.config/bash/alias.bash
     source ~/.config/bash/exports.bash
+
+    eval "$(starship init bash)"
   '';
   };
 }
