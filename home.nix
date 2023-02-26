@@ -2,7 +2,7 @@
 let 
   term_font = "Fira Code Nerd Font";
   term_font_size = "12";
-  term_theme = "kanagawa"
+  term_theme = "kanagawa";
 in 
 {
   # Home Manager needs a bit of information about you and the
