@@ -59,8 +59,7 @@ in
         x: 0
         y: 0
       dynamic_padding: false
-
-      decorations: none
+      decorations: full
     font:
       normal:
         family: ${term_font}
