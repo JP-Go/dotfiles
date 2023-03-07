@@ -14,6 +14,9 @@ let
     ripgrep
     nodejs
     exa
+    tdesktop
+    rustup
+    rust-analyzer
   ];
 in 
 {
