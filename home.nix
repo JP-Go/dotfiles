@@ -42,6 +42,8 @@ in
       add_newline = false;
     };
   };
+
+  programs.go.enable = true;
   
   home.packages = packages;
   home.file = {
