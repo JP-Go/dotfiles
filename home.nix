@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let 
   term_font = "Fira Code Nerd Font";
-  term_font_size = "12";
+  term_font_size = "13";
   term_theme = "kanagawa";
   packages = with pkgs; [
     htop
