@@ -44,6 +44,10 @@
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
