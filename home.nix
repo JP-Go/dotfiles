@@ -17,6 +17,7 @@ let
     tdesktop
     rustup
     rust-analyzer
+    opencv
   ];
 in 
 {
