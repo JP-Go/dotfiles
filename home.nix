@@ -13,11 +13,14 @@ let
     gcc_multi
     ripgrep
     nodejs
+    nodejs-19_x
     exa
     tdesktop
     rustup
     rust-analyzer
     opencv
+    pkg-config
+    nodePackages.pnpm
   ];
 in 
 {
