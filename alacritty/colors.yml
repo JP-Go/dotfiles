@@ -6,25 +6,26 @@ schemes:
       foreground: '#ECE1D7'
       background: '#2A2520'
     normal:
-      black:   '#352F2A'
-      red:     '#B65C60'
-      green:   '#78997A'
-      yellow:  '#EBC06D'
-      blue:    '#9AACCE'
+      black: '#352F2A'
+      red: '#B65C60'
+      green: '#78997A'
+      yellow: '#EBC06D'
+      blue: '#9AACCE'
       magenta: '#B380B0'
-      cyan:    '#86A3A3'
-      white:   '#A38D78'
+      cyan: '#86A3A3'
+      white: '#A38D78'
     bright:
-      black:   '#4D453E'
-      red:     '#F17C64'
-      green:   '#99D59D'
-      yellow:  '#EBC06D'
-      blue:    '#9AACCE'
+      black: '#4D453E'
+      red: '#F17C64'
+      green: '#99D59D'
+      yellow: '#EBC06D'
+      blue: '#9AACCE'
       magenta: '#CE9BCB'
-      cyan:    '#88B3B2'
-      white:   '#C1A78E'
-  mellow: &mellow
+      cyan: '#88B3B2'
+      white: '#C1A78E'
+  mellow:
     # Default colors
+    &mellow
     primary:
       background: '#161617'
       foreground: '#c9c7cd'
@@ -36,27 +37,27 @@ schemes:
 
     # Normal colors
     normal:
-      black:   '#27272a'
-      red:     '#f5a191'
-      green:   '#90b99f'
-      yellow:  '#e6b99d'
-      blue:    '#aca1cf'
+      black: '#27272a'
+      red: '#f5a191'
+      green: '#90b99f'
+      yellow: '#e6b99d'
+      blue: '#aca1cf'
       magenta: '#e29eca'
-      cyan:    '#ea83a5'
-      white:   '#c1c0d4'
+      cyan: '#ea83a5'
+      white: '#c1c0d4'
 
     # Bright colors
     bright:
-      black:   '#353539'
-      red:     '#ffae9f'
-      green:   '#9dc6ac'
-      yellow:  '#f0c5a9'
-      blue:    '#b9aeda'
+      black: '#353539'
+      red: '#ffae9f'
+      green: '#9dc6ac'
+      yellow: '#f0c5a9'
+      blue: '#b9aeda'
       magenta: '#ecaad6'
-      cyan:    '#f591b2'
-      white:   '#cac9dd'
+      cyan: '#f591b2'
+      white: '#cac9dd'
     draw_bold_text_with_bright_colors: true
-  snazzy: &snazzy   
+  snazzy: &snazzy
     primary:
       background: '#282a36'
       foreground: '#eff0eb'
@@ -65,30 +66,30 @@ schemes:
       cursor: '#97979b'
 
     selection:
-      text:       '#282a36'
+      text: '#282a36'
       background: '#feffff'
 
     normal:
-      black:   '#282a36'
-      red:     '#ff5c57'
-      green:   '#5af78e'
-      yellow:  '#f3f99d'
-      blue:    '#57c7ff'
+      black: '#282a36'
+      red: '#ff5c57'
+      green: '#5af78e'
+      yellow: '#f3f99d'
+      blue: '#57c7ff'
       magenta: '#ff6ac1'
-      cyan:    '#9aedfe'
-      white:   '#f1f1f0'
+      cyan: '#9aedfe'
+      white: '#f1f1f0'
 
     bright:
-      black:   '#686868'
-      red:     '#ff5c57'
-      green:   '#5af78e'
-      yellow:  '#f3f99d'
-      blue:    '#57c7ff'
+      black: '#686868'
+      red: '#ff5c57'
+      green: '#5af78e'
+      yellow: '#f3f99d'
+      blue: '#57c7ff'
       magenta: '#ff6ac1'
-      cyan:    '#9aedfe'
-      white:   '#eff0eb'
+      cyan: '#9aedfe'
+      white: '#eff0eb'
 
-  carbonfox: &carbonfox 
+  carbonfox: &carbonfox
     primary:
       background: "0x161616"
       foreground: "0xf2f4f8"
@@ -115,7 +116,9 @@ schemes:
     indexed_colors:
       - { index: 16, color: "0x3ddbd9" }
       - { index: 17, color: "0xff7eb6" }
-  gruvbox_dark: &gruvbox_dark # Default colors
+  gruvbox_dark:
+    # Default colors
+    &gruvbox_dark
     primary:
       # hard contrast: background = '0x1d2021'
       background: "0x282828"
@@ -233,7 +236,9 @@ schemes:
       cyan: "0x56b6c2"
       white: "0xe6efff"
 
-  catppuccin: &catppuccin # Default colors
+  catppuccin:
+    # Default colors
+    &catppuccin
     primary:
       background: "#1E1E2E" # base
       foreground: "#CDD6F4" # text
@@ -345,7 +350,6 @@ schemes:
       - { index: 16, color: "0xffa066" }
       - { index: 17, color: "0xff5d62" }
 
-
   rose-pine: &rose-pine
     primary:
       background: "0x191724"
@@ -387,4 +391,4 @@ schemes:
       end:
         foreground: "#6e6a86"
         background: "#1f1d2e"
-colors: *melange
+colors: *mellow
