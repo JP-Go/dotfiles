@@ -1,7 +1,6 @@
-#!/bin/sh
-PWD=$(pwd)
+#! /bin/env fish
+set pwd (pwd)
 
-# Basic workflow packages
 ln -sf $PWD/alacritty ~/.config/
 ln -sf $PWD/kitty ~/.config/
 ln -sf $PWD/.gitconfig ~/.gitconfig
@@ -12,3 +11,4 @@ ln -sf $PWD/i3 ~/.config/
 ln -sf $PWD/helix ~/.config/
 ln -sf $PWD/bash/.bashrc ~/.bashrc
 ln -sf $PWD/bash ~/.config/
+ln -sf $PWD/fish ~/.config/
