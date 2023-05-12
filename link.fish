@@ -11,4 +11,4 @@ ln -sf $PWD/i3 ~/.config/
 ln -sf $PWD/helix ~/.config/
 ln -sf $PWD/bash/.bashrc ~/.bashrc
 ln -sf $PWD/bash ~/.config/
-ln -sf $PWD/fish ~/.config/
+ln -sf $PWD/fish/* ~/.config/fish/
