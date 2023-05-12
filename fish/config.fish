@@ -3,8 +3,13 @@ if status is-interactive
 end
 
 # Variables
-set EDITOR nvim
-set VISUAL nvim
+if test -f ~/.local/bin/lvim 
+  set EDITOR lvim
+  set VISUAL lvim
+else 
+  set EDITOR nvim
+  set VISUAL nvim
+end
 export EDITOR
 export VISUAL
 
@@ -18,10 +23,13 @@ set TEXMFCONFIG ~/.texlive/texmf-config
 
 set PATH $PATH /home/jp/.cargo/bin
 set PATH $PATH $HOME/.cargo/env
+set PATH $PATH $HOME/.local/bin
+set PATH $PATH $HOME/.local/share/nvim/mason/bin
+
 
 # Abbreviations
 
-abbr vim nvim
+abbr vim $EDITOR
 abbr lg lazygit
 abbr ga git add
 abbr gc git commit
