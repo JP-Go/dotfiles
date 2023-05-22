@@ -143,7 +143,7 @@ parse_git_branch() {
 	git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 
-# eval "$(starship init bash)"
+eval "$(starship init bash)"
 
 [ -d $HOME/.cargo/env ] && \. "$HOME/.cargo/env"
 export VOLTA_HOME="$HOME/.volta"
@@ -181,7 +181,6 @@ n() {
 	fi
 }
 
-eval "$(starship init bash)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
