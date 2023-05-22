@@ -1,7 +1,13 @@
 #vim: ft=bash
 #
-alias vim="nvim"
-alias v="nvim"
+
+if [[ -f ~/.local/bin/lvim ]]; then
+	alias vim="lvim"
+	alias v="lvim"
+else 
+	alias vim="nvim"
+	alias v="nvim"
+fi
 
 alias ga="git add"
 alias gc="git commit"
