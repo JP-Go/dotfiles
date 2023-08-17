@@ -1,4 +1,4 @@
-theme =  "fleet_dark"
+theme =  "zenburn"
 
 [editor]
 idle-timeout = 20
