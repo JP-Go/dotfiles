@@ -38,5 +38,3 @@ PATH=$PATH:$ANDROID_HOME/tools
 PATH=$PATH:$ANDROID_HOME/tools/bin
 PATH=$PATH:$ANDROID_HOME/platform-tools
 PATH=$PATH:$ANDROID_HOME/../android-studio/bin
-
-PATH=$PATH:${HOME}/.local/share/nvim/mason/bin/; export PATH
