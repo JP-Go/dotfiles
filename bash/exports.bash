@@ -32,9 +32,9 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 export NNN_TMPFILE=${HOME}/.config/nnn/.lastd
 
 PATH=${PATH}:${HOME}/.local/bin
-export ANDROID_HOME=~/Android/Sdk
-PATH=$PATH:$ANDROID_HOME/emulator
-PATH=$PATH:$ANDROID_HOME/tools
-PATH=$PATH:$ANDROID_HOME/tools/bin
-PATH=$PATH:$ANDROID_HOME/platform-tools
-PATH=$PATH:$ANDROID_HOME/../android-studio/bin
+# export ANDROID_HOME=~/Android/Sdk
+# PATH=$PATH:$ANDROID_HOME/emulator
+# PATH=$PATH:$ANDROID_HOME/tools
+# PATH=$PATH:$ANDROID_HOME/tools/bin
+# PATH=$PATH:$ANDROID_HOME/platform-tools
+# PATH=$PATH:$ANDROID_HOME/../android-studio/bin

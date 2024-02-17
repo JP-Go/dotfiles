@@ -186,3 +186,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # Turso
 export PATH="/home/jp/.turso:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
