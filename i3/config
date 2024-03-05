@@ -21,7 +21,7 @@ font pango:JetBrainsMono Nerd Font 9
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-exec_always feh --bg-fill ~/Imagens/wallpapers/mountain.jpg
+exec_always feh --bg-fill ~/Imagens/wallpapers/nebula.jpg
 
 exec_always picom -CGb
 
