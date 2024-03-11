@@ -1,10 +1,10 @@
 import = ["/home/jp/.config/alacritty/colors.toml"]
 
 [cursor.style]
-shape = "Beam"
+shape = "Block"
 
 [font]
-size = 10
+size = 14
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
