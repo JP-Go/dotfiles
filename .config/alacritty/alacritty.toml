@@ -4,18 +4,18 @@ import = ["/home/jp/.config/alacritty/colors.toml"]
 shape = "Block"
 
 [font]
-size = 14
+size = 16
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Regular"
 
 [font.offset]
