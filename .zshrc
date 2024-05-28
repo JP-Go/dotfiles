@@ -22,6 +22,8 @@ if [[ -d $HOME/.local/bin ]]; then PATH="$PATH:$HOME/.local/bin";fi
 
 PATH=${PATH}:${HOME}/.local/bin
 
+PATH=${PATH}:${HOME}/go/bin
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -36,8 +38,8 @@ export VOLTA_HOME="$HOME/.volta"
 PATH=$VOLTA_HOME/bin:$PATH
 export PATH=$BUN_INSTALL/bin:$PATH
 
-eval "$(zoxide init zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(zoxide init zsh)"
