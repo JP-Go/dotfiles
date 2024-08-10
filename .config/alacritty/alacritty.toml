@@ -1,4 +1,4 @@
-import = ["/home/jp/.config/alacritty/colors.toml"]
+import = ["/home/jp/.config/alacritty/alacritty-flow.toml"]
 
 [cursor.style]
 shape = "Block"
