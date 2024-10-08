@@ -6,10 +6,9 @@
 - git (obviously)
 - bash (obviously);
 - zsh (optional);
-- stylua (and it's dependencies like rustup, cargo)
 - rust
 - polybar
-- bspwm (and sxhkd)
+- 
 - feh
 
 ## Installation
