@@ -7,15 +7,15 @@ shape = "Block"
 size = 16
 
 [font.bold]
-family = "Iosevka Nerd Font"
+family = "0xProto Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "Iosevka Nerd Font"
+family = "0xProto Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "0xProto Nerd Font"
 style = "Regular"
 
 [font.offset]
