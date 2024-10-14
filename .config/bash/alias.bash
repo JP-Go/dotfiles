@@ -20,3 +20,11 @@ if [[ -f /usr/bin/btop ]]; then alias htop="btop" ; fi
 
 alias pn="pnpm"
 alias px="pnpx"
+
+alias tmux="TERM=xterm-256color tmux"
+
+alias ll="ls -l"
+alias la="ls -a"
+
+alias cat="bat"
+alias grep="rg"

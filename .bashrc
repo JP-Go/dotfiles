@@ -167,4 +167,3 @@ esac
 # pnpm end
 #
 eval "$(zoxide init bash)"
-
