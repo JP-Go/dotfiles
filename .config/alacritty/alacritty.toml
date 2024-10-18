@@ -4,18 +4,18 @@ import = ["/home/jp/.config/alacritty/catppuccin-mocha.toml"]
 shape = "Block"
 
 [font]
-size = 16
+size = 18
 
 [font.bold]
-family = "0xProto Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "0xProto Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "0xProto Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Regular"
 
 [font.offset]
@@ -107,7 +107,7 @@ mods = "Control|Shift"
 [window]
 decorations = "none"
 dynamic_padding = true
-opacity = 0.9
+opacity = 0.8
 
 [window.dimensions]
 columns = 88
