@@ -30,3 +30,7 @@ abbr gc git commit
 abbr gd git diff
 abbr gs git status
 abbr gp git push
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
