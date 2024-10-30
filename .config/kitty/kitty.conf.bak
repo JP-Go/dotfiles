@@ -23,7 +23,7 @@ italic_font				IosevkaTermSlab Nerd Font
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 18.0
+font_size 15.0
 
 #: Font size (in pts)
 
@@ -1485,6 +1485,6 @@ shell_integration no-cursor
 
 
 # BEGIN_KITTY_THEME
-# Monokai Pro (Filter Spectrum)
+# Rosé Pine Moon
 include current-theme.conf
 # END_KITTY_THEME
