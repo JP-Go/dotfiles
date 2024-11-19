@@ -258,3 +258,14 @@ fi
 
 # source completion file
 compdef _k3d k3d
+
+# pnpm
+export PNPM_HOME="/home/jp/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+export PIPENV_VENV_IN_PROJECT=1
+. "/home/jp/.deno/env"
