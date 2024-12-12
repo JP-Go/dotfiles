@@ -1,4 +1,4 @@
-theme =  "ayu_evolve"
+theme =  "pop-dark"
 
 [editor]
 idle-timeout = 20
@@ -7,7 +7,8 @@ line-number = "relative"
 bufferline = "always"
 cursorline = true
 auto-format = true
-rulers = [80]
+color-modes = true
+rulers = [80, 120]
 
 [editor.cursor-shape]
 select = "block"
@@ -20,8 +21,8 @@ display-messages = true
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
+left = ["mode", "spinner","file-name"]
+center = ["workspace-diagnostics","version-control"]
 right = ["diagnostics", "position", "file-encoding", "file-line-ending", "file-type"]
 
 [editor.indent-guides]
@@ -32,3 +33,5 @@ character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 "0" = ["goto_line_start"]
 "$" = ["goto_line_end"]
 "esc" = ["collapse_selection","keep_primary_selection"]
+"tab" = ["goto_next_buffer"]
+"S-tab" = ["goto_previous_buffer"]
