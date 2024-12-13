@@ -5,11 +5,10 @@
 #: kitty has very powerful font management. You can configure
 #: individual font faces and even specify special fonts for particular
 #: characters.
-
-font_family				IosevkaTermSlab Nerd Font
-bold_font				IosevkaTermSlab Nerd Font
-bold_italic_font        IosevkaTermSlab Nerd Font
-italic_font				IosevkaTermSlab Nerd Font
+font_family				IosevkaTermSlab Nerd Font Mono
+bold_font				IosevkaTermSlab Nerd Font Mono
+bold_italic_font        IosevkaTermSlab Nerd Font Mono
+italic_font				IosevkaTermSlab Nerd Font Mono
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. To get a full list of supported fonts use the `kitty
@@ -23,7 +22,7 @@ italic_font				IosevkaTermSlab Nerd Font
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 15.0
+font_size 18.0
 
 #: Font size (in pts)
 
@@ -651,7 +650,7 @@ tab_bar_margin_height 0.0 0.0
 #: the second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-tab_bar_style fade
+tab_bar_style powerline
 
 #: The tab bar style, can be one of:
 
@@ -707,7 +706,7 @@ tab_activity_symbol none
 #: tab that does not have focus has some activity. If you want to use
 #: leading or trailing spaces surround the text with quotes.
 
-tab_title_template "{title}"
+tab_title_template "{index}: {title}"
 
 #: A template to render the tab title. The default just renders the
 #: title. If you wish to include the tab-index as well, use something
@@ -1276,6 +1275,8 @@ map kitty_mod+0 tenth_window
 
 #: Tab management {{{
 
+map kitty_mod+] next_tab
+map kitty_mod+[  previous_tab
 map kitty_mod+right next_tab
 map kitty_mod+left  previous_tab
 map kitty_mod+t     new_tab
@@ -1485,6 +1486,7 @@ shell_integration no-cursor
 
 
 # BEGIN_KITTY_THEME
-# Rosé Pine Moon
+# Monokai Pro (Filter Spectrum)
 include current-theme.conf
 # END_KITTY_THEME
+
