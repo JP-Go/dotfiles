@@ -1,0 +1,5 @@
+theme = gruber-darker
+font-size = 14
+cursor-style = block
+shell-integration-features = no-cursor
+window-decoration = false
