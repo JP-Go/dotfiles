@@ -26,12 +26,7 @@ zoxide init fish | source
 # Abbreviations
 
 abbr vim $EDITOR
-abbr lg lazygit
-abbr ga git add --patch
-abbr gc git commit
-abbr gd git diff
-abbr gs git status
-abbr gp git push
+source $HOME/.config/fish/fish_aliases.fish
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
