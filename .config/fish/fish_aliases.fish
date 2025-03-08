@@ -1,3 +1,7 @@
+abbr e $EDITOR
+if type -q lazygit
+    abbr lg lazygit
+end
 abbr ge git status
 abbr gs git switch
 abbr gn git switch -c 
