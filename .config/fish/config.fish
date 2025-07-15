@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    atuin init fish | source
 end
 
 # VIM mode
@@ -13,6 +14,7 @@ set PATH $PATH $HOME/.cargo/env
 set PATH $PATH $HOME/.local/opt/node/bin
 set PATH $PATH $HOME/.local/opt/node/bin
 set PATH $PATH $HOME/.local/share/pnpm/
+set PATH $PATH $HOME/Jetbrains/WebStorm/bin
 set PATH $PATH /usr/local/go/bin
 set PATH $PATH /opt/DataGrip/bin/
 set -x PATH $PATH $HOME/.local/bin
@@ -20,8 +22,6 @@ set -x PATH $PATH $HOME/.local/bin
 if type -q nvim
     set EDITOR nvim
 end
-
-zoxide init fish | source
 
 # Abbreviations
 
@@ -39,6 +39,7 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
+zoxide init fish | source
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:
@@ -47,4 +48,4 @@ end
 # This section can be safely removed at any time if needed.
 test -r '/home/jp/.opam/opam-init/init.fish' && source '/home/jp/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
 # END opam configuration
-eval "$(symfony self:completion fish)"
+test -r '/home/jp/.config/symphony/bin/symphony' && eval "$(symfony self:completion fish)" > /dev/null 2> /dev/null; or true

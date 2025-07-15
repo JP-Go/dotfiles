@@ -168,3 +168,7 @@ esac
 #
 eval "$(zoxide init bash)"
 . "/home/jp/.deno/env"
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
