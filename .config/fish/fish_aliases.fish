@@ -10,5 +10,6 @@ abbr ga git add
 abbr gp git pull
 abbr gP git push
 
-abbr ovpn openvpn3 session-start --config ovpn_jp
-abbr dovpn openvpn3 session-manage --config ovpn_jp --disconnect
+abbr ovpnc openvpn3 session-start  --config ovpn_jp 
+abbr ovpnd openvpn3 session-manage --config ovpn_jp --disconnect
+abbr ovpnl openvpn3 sessions-list
