@@ -167,11 +167,8 @@ esac
 # pnpm end
 #
 eval "$(zoxide init bash)"
-. "/home/jp/.deno/env"
-. "$HOME/.atuin/bin/env"
-
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-eval "$(atuin init bash)"
+test -e "$HOME/.deno/env" &&  . "$HOME/.deno/env" 
+test -e "/usr/share/nvm/init-nvm.sh" && . "/usr/share/nvm/init-nvm.sh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
