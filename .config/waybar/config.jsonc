@@ -19,11 +19,12 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "wlr/taskbar",
+        "tray",
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "hyprland/language"
+        "hyprland/language",
+        "battery"
     ],
     /* === Modules Left === */
     "custom/archicon": {
@@ -83,19 +84,6 @@
         "format": "{}",
         "max-length": 8
     },
-    /* === Modules Right === */
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "all-outputs": true,
-        "active-first": false,
-        "tooltip-format": "{name}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "ignore-list": [
-            "rofi",
-            "hyprlauncher"
-        ]
-    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -127,5 +115,10 @@
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
         "format-pt": "BR",
         "format-en": "ENG"
+    },
+    "battery": {
+        "states": {
+            "warning": 30
+        }
     }
 }
