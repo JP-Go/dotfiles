@@ -1,13 +1,8 @@
 #vim: ft=bash
 #
 
-if [[ -f ~/.local/bin/lvim ]]; then
-	alias vim="lvim"
-	alias v="lvim"
-else 
-	alias vim="nvim"
-	alias v="nvim"
-fi
+alias vim="nvim"
+alias v="nvim"
 
 alias ga="git add"
 alias gc="git commit"
@@ -26,5 +21,5 @@ alias tmux="TERM=xterm-256color tmux"
 alias ll="ls -l"
 alias la="ls -a"
 
-alias cat="bat"
-alias grep="rg"
+if [[ -f /usr/bin/bat ]]; then alias cat="bat" ; fi
+if [[ -f /usr/bin/rg ]]; then alias grep="rg" ; fi
