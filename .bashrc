@@ -139,10 +139,6 @@ ex() {
 source ~/.config/bash/alias.bash
 source ~/.config/bash/exports.bash
 
-parse_git_branch() {
-	git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
-}
-
 [ -d $HOME/.cargo/env ] && \. "$HOME/.cargo/env"
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
@@ -154,22 +150,6 @@ fi
 if [ -d "$HOME/.cargo/bin/" ]; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-# ex: ts=4 sw=4 et filetype=sh
 
-# pnpm
-export PNPM_HOME="/home/jp/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-#
 eval "$(zoxide init bash)"
-test -e "$HOME/.deno/env" &&  . "$HOME/.deno/env" 
-test -e "/usr/share/nvm/init-nvm.sh" && . "/usr/share/nvm/init-nvm.sh"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+eval -- "$(/usr/bin/starship init bash --print-full-init)"
