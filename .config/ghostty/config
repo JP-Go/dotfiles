@@ -3,3 +3,5 @@ font-size = 14
 cursor-style = block
 shell-integration-features = no-cursor
 window-decoration = true
+window-height = 24
+window-width = 80
