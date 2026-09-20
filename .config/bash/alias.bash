@@ -22,4 +22,3 @@ alias ll="ls -l"
 alias la="ls -a"
 
 if [[ -f /usr/bin/bat ]]; then alias cat="bat" ; fi
-if [[ -f /usr/bin/rg ]]; then alias grep="rg" ; fi
