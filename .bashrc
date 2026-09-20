@@ -151,8 +151,13 @@ if [ -d "$HOME/.cargo/bin/" ]; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+if [ -d "$HOME/opt/bin/" ]; then
+    export PATH="$HOME/opt/bin:$PATH"
+fi
+
 eval "$(zoxide init bash)"
 eval -- "$(/usr/bin/starship init bash --print-full-init)"
 eval "$(fnm env --use-on-cd --shell bash)"
 export GTK_IM_MOULE=simple
 export QT_IM_MOULE=simple
+export ANDROID_HOME=$HOME/opt/Android/SDK
